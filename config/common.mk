@@ -43,6 +43,13 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_COPY_FILES += \
     vendor/dnd/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
+#DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/dnd/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
