@@ -124,7 +124,8 @@ PRODUCT_PACKAGES += \
     libemoji \
     LiveWallpapersPicker \
     PhotoTable \
-    Terminal
+    Terminal \
+    Chromium
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
