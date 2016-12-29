@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     masquerade \
-    SoundRecorder \
     WeatherProvider
 
 # Extra tools in CM
