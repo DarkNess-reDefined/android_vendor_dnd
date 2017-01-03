@@ -246,7 +246,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.reDefined.version=$(CM_VERSION) \
 ro.modversion=$(CM_VERSION)
-rr.build.type=$(RR_BUILDTYPE) \
+reDefined.build.type=$(RR_BUILDTYPE) \
  Default \
  reDefined.ota.version= $(shell date -u +%Y%m%d) \
  ro.romstats.name=DarkNess-reDefined \
