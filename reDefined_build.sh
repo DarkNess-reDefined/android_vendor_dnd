@@ -16,16 +16,18 @@ bldcya=${txtbld}$(tput setaf 6) # Bold cyan
 normal='tput sgr0'
 
 ./vendor/cm/colors
+
+
 echo -e "";
 tput setaf 1
-echo "                                   ";
-echo " _|_|_|     _|      _|   _|_|_|    ";
-echo " _|    _|   _|_|    _|   _|    _|  ";
-echo " _|    _|   _|  _|  _|   _|    _|  ";
-echo " _|    _|   _|    _|_|   _|    _|  ";
-echo " _|_|_|     _|      _|   _|_|_|    ";
-echo "                                   ";
-echo "                                   ";
+echo -e "                                   ";
+echo -e " _|_|_|     _|      _|   _|_|_|    ";
+echo -e " _|    _|   _|_|    _|   _|    _|  ";
+echo -e " _|    _|   _|  _|  _|   _|    _|  ";
+echo -e " _|    _|   _|    _|_|   _|    _|  ";
+echo -e " _|_|_|     _|      _|   _|_|_|    ";
+echo -e "                                   ";
+echo -e "                                   ";
 echo -e "";
 tput setaf 2
 echo -e " √ Build is Successfully Done! ";

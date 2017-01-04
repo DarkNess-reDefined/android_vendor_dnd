@@ -45,7 +45,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/cm/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/cm/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
+    vendor/cm/prebuilt/common/bin/50-reDefined.sh:system/addon.d/50-reDefined.sh \
     vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # Backup Services whitelist
@@ -246,7 +246,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.reDefined.version=$(CM_VERSION) \
 ro.modversion=$(CM_VERSION)
-reDefined.build.type=$(RR_BUILDTYPE) \
+reDefined.build.type=$(DND_BUILDTYPE) \
  Default \
  reDefined.ota.version= $(shell date -u +%Y%m%d) \
  ro.romstats.name=DarkNess-reDefined \
