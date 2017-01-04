@@ -238,7 +238,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
 PRODUCT_VERSION = 1.0
 ifneq ($(DND_BUILDTYPE),)
-CM_VERSION := DarkNess-reDefined-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(DND_BUILD)
+CM_VERSION := DarkNess-reDefined-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)-$(DND_BUILDTYPE)
 else
 CM_VERSION := DarkNess-reDefined-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 endif
