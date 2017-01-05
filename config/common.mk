@@ -128,9 +128,6 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMFileManager \
     CMSettingsProvider \
-    CMUpdater \
-    CMWallpapers \
-    CyanogenSetupWizard \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
@@ -138,7 +135,6 @@ PRODUCT_PACKAGES += \
     Screencast \
     SoundRecorder \
     Trebuchet \
-    WallpaperPicker \
     WeatherProvider
 
 # Exchange support
@@ -234,6 +230,9 @@ PRODUCT_PACKAGES += \
     su
 endif
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
+
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
 PRODUCT_VERSION = 1.0
@@ -246,12 +245,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.reDefined.version=$(CM_VERSION) \
 ro.modversion=$(CM_VERSION)
-reDefined.build.type=$(DND_BUILDTYPE) \
- Default \
- reDefined.ota.version= $(shell date -u +%Y%m%d) \
- ro.romstats.name=DarkNess-reDefined \
- ro.romstats.version=$(PRODUCT_VERSION) \
- ro.romstats.tframe=7
+reDefined.build.type=$(DND_BUILDTYPE)
 
 ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
     PRODUCT_EXTRA_RECOVERY_KEYS += \
