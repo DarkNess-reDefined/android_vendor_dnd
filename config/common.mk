@@ -136,6 +136,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
+    masquerade \
     Screencast \
     SoundRecorder \
     Trebuchet \
