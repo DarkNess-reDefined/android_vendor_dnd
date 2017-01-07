@@ -251,12 +251,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.reDefined.version=$(CM_VERSION) \
 ro.modversion=$(CM_VERSION)
 reDefined.build.type=$(DND_BUILDTYPE)
-
-ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
-    PRODUCT_EXTRA_RECOVERY_KEYS += \
-        vendor/cm/build/target/product/security/cm \
-        vendor/cm/build/target/product/security/cm-devkey
-endif
+ 
+PRODUCT_EXTRA_RECOVERY_KEYS += \ 
+ vendor/cm/build/target/product/security/lineage 
 
 CM_DISPLAY_VERSION := $(CM_VERSION)
 
