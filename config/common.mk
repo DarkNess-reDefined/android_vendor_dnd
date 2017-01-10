@@ -17,7 +17,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false \
+    ro.opa.eligible_device=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
@@ -130,21 +131,15 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     AudioFX \
-    CMFileManager \
     CMSettingsProvider \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
     masquerade \
-    Screencast \
     SoundRecorder \
-    Trebuchet \
+    Launcher3 \
     WeatherProvider
-
-# Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
