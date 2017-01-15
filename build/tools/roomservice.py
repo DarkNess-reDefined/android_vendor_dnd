@@ -52,13 +52,13 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from DarkNess reDefined Github (http://github.com/dont-try-to-look-here)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from DarkNess reDefined Github (http://github.com/Darkness-reDefined)." % device)
 
 repositories = []
 
 page = 1
 while not depsonly:
-    result = json.loads(urllib.request.urlopen("https://api.github.com/users/dont-try-to-look-here/repos?page=%d" % page).read().decode())
+    result = json.loads(urllib.request.urlopen("https://api.github.com/users/Darkness-reDefined/repos?page=%d" % page).read().decode())
     if len(result) == 0:
         break
     for res in result:
@@ -149,7 +149,7 @@ def add_to_manifest_dependencies(repositories):
                 print ('Updating dependency %s' % (repo_name))
                 existing_project.set('name', repository['repository'])
             if existing_project.attrib['revision'] == repository['branch']:
-                print ('dont-try-to-look-here/%s already exists' % (repo_name))
+                print ('Darkness-reDefined/%s already exists' % (repo_name))
             else:
                 print ('updating branch for %s to %s' % (repo_name, repository['branch']))
                 existing_project.set('revision', repository['branch'])
@@ -183,12 +183,12 @@ def add_to_manifest(repositories):
         repo_name = repository['repository']
         repo_target = repository['target_path']
         if exists_in_tree(lm, repo_name):
-            print('dont-try-to-look-here/%s already exists' % (repo_name))
+            print('Darkness-reDefined/%s already exists' % (repo_name))
             continue
 
-        print('Adding dependency: dont-try-to-look-here/%s -> %s' % (repo_name, repo_target))
+        print('Adding dependency: Darkness-reDefined/%s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "github", "name": "dont-try-to-look-here/%s" % repo_name, "revision": "n" })
+            "remote": "github", "name": "Darkness-reDefined/%s" % repo_name, "revision": "n" })
 
         if 'branch' in repository:
             project.set('revision',repository['branch'])
