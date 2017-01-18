@@ -233,6 +233,11 @@ PRODUCT_PACKAGES += \
     su
 endif
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/cm/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 
