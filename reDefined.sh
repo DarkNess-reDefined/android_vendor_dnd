@@ -1,5 +1,4 @@
 #!/bin/bash
-# Build type chooser for the Resurrection Remix ROM
 # Specify colors utilized in the terminal
     red=$(tput setaf 1)             #  red
     grn=$(tput setaf 2)             #  green
@@ -22,13 +21,27 @@
     blurev=${rev}$(tput setaf 4)
     normal='tput sgr0'
 
+echo -e "";
+tput setaf 6
+echo -e "                                                                                                                        ";
+echo -e " ________              ______ _____   __                                  ________     ____________            _________";
+echo -e " ___  __ \_____ __________  /____  | / /___________________   _______________  __ \_______  __/__(_)_________________  /";
+echo -e " __  / / /  __  /_  ___/_  //_/_   |/ /_  _ \_  ___/_  ___/   __  ___/  _ \_  / / /  _ \_  /_ __  /__  __ \  _ \  __  / ";
+echo -e " _  /_/ // /_/ /_  /   _  ,<  _  /|  / /  __/(__  )_(__  )    _  /   /  __/  /_/ //  __/  __/ _  / _  / / /  __/ /_/ /  ";
+echo -e " /_____/ \__,_/ /_/    /_/|_| /_/ |_/  \___//____/ /____/     /_/    \___//_____/ \___//_/    /_/  /_/ /_/\___/\__,_/   ";
+echo -e "                                                                                                                        ";
+echo -e "                                                                                                                        ";
+echo -e "";
+tput setaf 2
+echo -e " Thanks for choosing DarkNess reDefined, Now go ahead and build this cool shit ";
+echo -e "";
 echo -e ${ylw}"\n\n ▼ Which build-type do you want to choose?\n"${txtrst}
 echo -e "";
-echo -e ${blu}" 〉 1- Official "${txtrst}${red}"    ︱ Only for the official builds by the maintainers"${txtrst}
+echo -e ${cya}" 〉 1- Official "${txtrst}${red}"    ︱ Only for the official builds by the maintainers"${txtrst}
 echo -e "";
-echo -e ${blu}" 〉 2- Unofficial "${txtrst}${red}"  ︱ For the unofficial builds"${txtrst}
+echo -e ${cya}" 〉 2- Unofficial "${txtrst}${red}"  ︱ For the unofficial builds"${txtrst}
 echo -e "";
-echo -e ${blu}" 🕑  30/sec Time-out"${txtrst}${red}"︱ Default option"${txtrst}
+echo -e ${cya}" 🕑  30/sec Time-out"${txtrst}${red}"︱ Default option"${txtrst}
 echo -e "";
 echo -e ${cya}" ▼ Pick a number"${txtrst}
 echo -e "";
