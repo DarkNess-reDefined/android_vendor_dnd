@@ -132,6 +132,12 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
 
+# reDefined packages
+PRODUCT_PACKAGES += \
+    SnapdragonCamera \
+    SnapdragonGallery \
+    Launcher3
+
 # Custom CM packages
 PRODUCT_PACKAGES += \
     AudioFX \
@@ -142,7 +148,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     masquerade \
     SoundRecorder \
-    Launcher3 \
     WeatherProvider
 
 # Extra tools in CM
@@ -238,9 +243,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/cm/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=1
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
