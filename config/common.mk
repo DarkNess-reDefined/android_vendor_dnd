@@ -131,7 +131,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gallery2 \
     ViaBrowser \
-    DarknessHub
+    DarknessHub \
+    Launcher3
 
 # Exchange support
 PRODUCT_PACKAGES += \
