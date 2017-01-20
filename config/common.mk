@@ -123,8 +123,7 @@ PRODUCT_PACKAGES += \
     libemoji \
     LiveWallpapersPicker \
     PhotoTable \
-    Terminal \
-    Chromium
+    Terminal
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
