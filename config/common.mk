@@ -238,10 +238,6 @@ PRODUCT_PACKAGES += \
     su
 endif
 
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
 PRODUCT_VERSION = 1.0
