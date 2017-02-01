@@ -239,6 +239,14 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# Magisk Manager
+PRODUCT_PACKAGES += \
+    MagiskManager
+
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/dnd/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+
 DEVICE_PACKAGE_OVERLAYS += vendor/dnd/overlay/common
 
 
