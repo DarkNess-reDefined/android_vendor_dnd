@@ -93,7 +93,7 @@ PRODUCT_COPY_FILES += \
 include vendor/dnd/config/dnd_audio.mk
 
 # Theme engine
-include vendor/dnd/config/themes_common.mk
+#include vendor/dnd/config/themes_common.mk
 
 ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
