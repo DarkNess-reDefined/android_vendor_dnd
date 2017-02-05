@@ -128,6 +128,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SnapdragonCamera \
     SnapdragonGallery \
+    AboutDND \
+    SlimOTA \
     Launcher3
 
 # Custom CM packages
