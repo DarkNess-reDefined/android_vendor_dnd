@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
     SnapdragonGallery \
     AboutDND \
     SlimOTA \
-    Launcher3
+    Launcher3 \
+    DNDWalls
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
