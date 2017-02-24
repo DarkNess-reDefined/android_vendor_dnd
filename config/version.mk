@@ -16,6 +16,12 @@
 # DarkNess reDefined Versioning
 DND_VERSION = v1.0
 
+
+ifeq ($(DND_BUILDTYPE), OFFICIAL)
+PRODUCT_PACKAGES += \
+    SlimOTA
+endif
+
 ifndef DND_BUILD_TYPE
     DND_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL

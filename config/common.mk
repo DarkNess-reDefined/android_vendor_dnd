@@ -129,7 +129,6 @@ PRODUCT_PACKAGES += \
     SnapdragonCamera \
     SnapdragonGallery \
     AboutDND \
-    SlimOTA \
     Launcher3 \
     DNDWalls
 
