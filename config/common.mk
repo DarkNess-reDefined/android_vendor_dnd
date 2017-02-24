@@ -134,7 +134,6 @@ PRODUCT_PACKAGES += \
     SnapdragonCamera \
     SnapdragonGallery \
     AboutDND \
-    SlimOTA \
     Launcher3 \
     DNDWalls
 
@@ -257,6 +256,11 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
+
+ifeq ($(DND_BUILDTYPE), Official)
+PRODUCT_PACKAGES += \
+    SlimOTA
+endif
 
 PRODUCT_VERSION = 1.0
 ifneq ($(DND_BUILDTYPE),)
