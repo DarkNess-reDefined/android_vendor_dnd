@@ -139,9 +139,7 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     CMSettingsProvider \
-    Eleven \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
