@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # DarkNess reDefined Versioning
-DND_VERSION = v1.1
+DND_VERSION = v1.2
 
 
 ifeq ($(DND_BUILDTYPE), OFFICIAL)
