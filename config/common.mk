@@ -259,7 +259,7 @@ PRODUCT_PACKAGES += \
     SlimOTA
 endif
 
-PRODUCT_VERSION = 1.1
+PRODUCT_VERSION = 1.2
 ifneq ($(DND_BUILDTYPE),)
 CM_VERSION := DarkNess-reDefined-N-v$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)-$(DND_BUILDTYPE)
 else
