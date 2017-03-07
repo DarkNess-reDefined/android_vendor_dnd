@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     WallpaperPicker \
-    masquerade \
+    ThemeInterfacer \
     WeatherProvider
 
 # Exchange support
