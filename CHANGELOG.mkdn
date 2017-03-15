@@ -373,3 +373,363 @@ CHANGELOG (notable new features)
 * Supersonic: WiMAX support - HTC, Shinzul, toastcfh, shift, #teamwin, Cyanogen, Joey Conway
 * Supersonic: HDMI mirror support: #teamwin
 * ONE: Enabled native WiFi tethering - arcee
+=======
+
+# DarkNess reDefined Version 1.3 Changelog
+====================================================
+
+03-15-2017
+============
+
+#### device/xiaomi/kenzo/
+* 9d4e8df Remove Flashlight hax
+
+#### frameworks/base/
+* e20881a ThemeSafety: Introduce App Crash Intent The intent received by substratum and it will disable all enabled overlays.
+* 134de1a Revert "Use Stock volte icon" #15
+* 2953f1c QS: add Screenrecord tile
+* 1d83218 Disable HD icon
+
+#### vendor/xiaomi/
+* 0893d5b kenzo: Add camera binary patch
+
+03-14-2017
+============
+
+#### frameworks/base/
+* 9a0de67 base: set scrolling to 0.006f
+
+#### vendor/cm/
+* 4a85948 Add changelog generator script
+
+03-13-2017
+============
+
+#### build/
+* db1ee0d Avoid adding an extra slash if OUT_DIR_COMMON_BASE ends in a slash
+
+#### frameworks/av/
+* a570aa2 Conditionally revert "CameraService: Allow HAL to handle video buffer duped FD's."
+
+#### frameworks/base/
+* 153e49e National roaming info for new Tuenti MNC in Spain
+* 0985bb5 Add MVNO info for tele2 in Croatia
+* 4eeaee7 SFR sims should treat Spain as roaming
+* 4c04c0d Vodafone SIMs should treat Spain as roaming
+
+#### hardware/cyanogen/
+* 6e2dfc6 livedisplay: SDM: Fix display mode handling
+
+#### packages/services/Telephony/
+* 5c1b6a7 Automatic translation import
+* ddb9a30 CallFeatureSettings: Only show call barring option if QTI package installed
+* eaf523f Telephony: Fix mobile network settings for CDMA without LTE
+* b2a09f4 Automatic translation import
+* 793b33d Automatic translation import
+* 80beb2a Automatic translation import
+
+#### vendor/cm/
+* d9fa44c Add TvSettings to common tv config.
+
+03-12-2017
+============
+
+#### frameworks/base/
+* 32fdf9b Revert "Use Stock volte icon"
+
+03-11-2017
+============
+
+#### art/
+* 62d073e Disable FDO_SUPPORT [1/2]
+
+#### device/xiaomi/kenzo/
+* 8dedb06 Update dnd.dependencies
+* ff7e7c2 kenzo: add kate to ota assert devices
+* a8ab979 Revert "kenzo: selinux permissive by default"
+* 30e3405 kenzo: add VR support
+* f348d3d kenzo: Enable low power record and radio power save modes
+* fbdb51d QCamera2: Set denoise process plate to streamlined CbCr
+* 9ddd250 QCamera2:HAL1: Flush pending video frames during stopRecording.
+* 43e76ea QCamera2: Fix memory leak due to thread join.
+* c8f2ec8 kenzo: QCamera2: Initialize string variables
+* 478b82a Set media.camera.ts.monotonic to 1 after updating Camera HAL
+* 27613b7 kenzo: camera: make 3 retries for open camera HAL
+* 5f993dd kenzo: Use MIUI Global Stable build fingerprint
+* 1d08fd4 QCamera2: HAL3: replace abort with exit Bug: 26570334
+* a19ac56 QCamera2: HAL3: Restart daemon and mediaserver when buffer is lost. When there are buffers not returned during closeCamera, restart both daemon and mediaserver to reclaim leaked memory.
+* 8e71b04 QCamera2/HAL3: Advertize correct timestamp source Issue: Video and Display uses CLOCK_MONOTONIC as clock reference for AV synchronization and rate controls. But camera usecases require CLOCK_BOOTTIME (same as CLOCK_MONOTONIC but includes the suspend time as well) for synchronization with Gyro and other sensors. This can cause clock source mismatch leading to black preview or video
+* 3873a50 Move ion allocations to use the same client. We don't need to create a new ion client for every ion allocation.
+* 4052644 Camera3: Fix video width/height initialization Video width and height need to be initialized even in non-4K case.
+* 3aa5465 QCamera2: HAL3: Clear metadata before last unconfigure Issue: When camera preview is in torch mode and while camera is getting closed, sometimes the flash re-flashes again for fraction of a second.
+* d0633d2 QCamera2: Set CDS to Off by default in HAL3. Issue: With CDS set to Auto, frame skip happens during CDS toggling. But due to scheduling problems, the frame skip information is not being updated properly in metadata, resulting in framework indefinitely waiting for the skipped frame.
+* f1e58e2 QCamera2: Added the enum for AWB gains. Framwork sends the white balance gains in R Gr Gb B format, whereas core applies the WB gains in R G B domain. Currently core is accessing the WB gains array by numeric values. Instead, added an enum of WB gains for better readability.
+* 81dc626 QCamera2: Fixing KW errors. Fixed two KW errors 1. Prevent array index out of bounds for fds_bits 2. The api hw->lockAPI() is being called twice without unlocking after first call to this api. Fixed following KW errors 1. Fixed KW error for banned function sprintf. Instead of sprintf we have to use snprintf. 2. Fixed null pointer dereferenced KW error.
+* 5807a4f QCamera2: Fix max zoom issue in HAL3 Issue: Max zoom in HAL3 is hardcoded to 4x.
+* f5c94ab mm_camera: Retry opening camera for ENODEV error When mediaserver and mm-camera-daemon are killed at the same time, opening camera nodes may return ENODEV before mm-camera-daemon is initialized.
+* a70c0c5 QCamera2: HAL3: Increase device open retry times Device open may fail when cameraserver and mm-qcamera-daemon are killed at the same time.
+* 1b45b3b Add 34 translations to flashlight app
+* ee568a9 [hax]:kenzo: Initial push of Flashlight app
+* a9c7985 kenzo: Use oss consumerir hal
+* 071f228 kenzo: remove Sharp display calibration data
+* d17fc83 kenzo: Import oss camera hal from caf
+
+#### external/skia/
+* 514bba0 Skia: Disable FDO_SUPPORT [2/2] *this allows ccache to work on art/skia and increases build times by 10+ minutes
+
+#### frameworks/av/
+* 932e7ca Merge pull request  from Darkness-reDefined/aosp
+* 3456890 NuPlayerSource: clarify getFormat API and fix its usage.
+* e52794a fix warning: Dereference of null pointer
+* 65e6e6c Fix uninitialized pointer dereference when loading default radio module.
+* c9b48c0 Fix potential memory leaks (compiler warnings)
+* 86d4f8a Fix "Dereference of null pointer" compiler warning.
+* 4efcd35 Fix dereference null pointer warning.
+* 40aa69c libeffects: fix enum conversion warnings.
+* 3e975c9 Fix warning: Called C++ object pointer is null
+* 737f408 Merge pull request from Darkness-reDefined/aospfix
+
+#### frameworks/base/
+* dab9a6e Play nice when OmniJaws is not installed
+* 8f4eaea base: OmniJaws qs tile integration [3/4]
+* cfbbd0e Add PackageUtils
+* c46447a Adjusted animation timing
+* c39902f Fix a use-of-uninitialized-value warning.
+* 42cf991 Avoid needless Integer.valueOf() object allocation.
+* 044ff26 Integer.valueOf() -> Integer.parseInt() to avoid allocation.
+
+#### hardware/intel/img/psb_video/
+* ce7f070 psb_video: fix video encoding on clovertrail once again
+
+#### manifest/
+* 27b8f2c Manifest: Add OmniJaws [1/4]
+
+#### packages/apps/DNDWalls/
+* 33d67ee Show app in launcher
+
+#### packages/apps/Launcher3/
+* b472e04 Launcher3: prevent crash
+* 826c910 Merge cc2321f3b184fbf158d649bf25bdeca7fd27c99e on remote branch
+* f9f9744 Launcher3: support google now tab
+* 6abc04a Launcher3: import reversed google now lib
+* b704a0d Launcher3: refactor gesture handling
+* 18cfb8e Launcher3: double tap on home screen to turn off screen
+* db05462 Launcher3: Add swipe up/down gestures
+
+#### packages/apps/Settings/
+* fa6f1ef Add OmniJaws longpress/tile 'more settings' action
+* 1539baa Settings: OmniJaws qs tile integration [4/4]
+
+03-10-2017
+============
+
+#### build/
+* 186557c build: Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### external/skia/
+* 9e23a87 Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### frameworks/av/
+* fc75855 fw_av: Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### frameworks/base/
+* 19dfa80 ExtShared build as priv-app
+* 9af7873 camera: Make secondary camera package list opt out
+* fcb960a VolumeDialog: Fix mismerge
+* 3f8d094 Fingerprints: Increase MAX_FAILED_ATTEMPTS to 10
+* afd42ac Make Data/Wifi activity icon in statusbar optional [1/2]
+* 4fd252c Use Stock volte icon pulled from op3
+* b736c26 fw_base: Merge tag 'android-7.1.1_r25' into cm-14.1
+* 1f84cd7 base: move animation_toast to PhoneWindowManager
+* 8f8cca7 base: remove mis-merged
+* dc80044 Advanced screenshot functionality [1/2] *shortened the screenshot timeout on screenshot power menu entry and qs tile *longpress power button screenshot item for selectable screenshot *longpress quick settings button for selectable screenshot *ability to force selectable screenshots on volume up and power instead of screen record
+
+#### packages/apps/Messaging/
+* 250ab5a Merge tag 'android-7.1.1_r25' into cm-14.1
+* 6ff7039 Automatic translation import
+* e13939a Automatic translation import
+
+#### packages/apps/Settings/
+* acc3e57 Move lockscreen stuffs to Category
+* f97dd11 We have this in dev_prefs
+* 5202e69 Make Data/Wifi activity icon in statusbar optional [2/2]
+* 4809f59 Animation selection fix
+* bf5e354 Advanced screenshot functionality [2/2]
+
+#### system/core/
+* 270e2e2 rootdir: init.rc: Fix for "add_tid_to_cgroup failed to write" warnings
+
+#### vendor/cmsdk/
+* 01051a6 Automatic translation import
+* b35e9fd CMSDK: Tests: AIRPLANE_MODE_ON has moved
+* da28908 Automatic translation import
+* 3416ca1 Automatic translation import
+* e86ecad CMPartsPreference: Update PreferenceScreen theme
+
+03-09-2017
+============
+
+#### frameworks/base/
+* 808d1fb Fw_base - AOKP Animations remove override app anim feature
+
+#### frameworks/opt/net/wifi/
+* 2c25264 WifiStateMachine: Probe neighbours only when roaming
+
+#### hardware/qcom/fm/
+* fbc3a7b Automatic translation import
+
+#### packages/apps/Bluetooth/
+* 4c89dd1 Automatic translation import
+
+#### packages/apps/Browser/
+* 5b406e5 Automatic translation import
+
+#### packages/apps/Calendar/
+* 1602c07 Automatic translation import
+
+#### packages/apps/Camera2/
+* 479d293 Automatic translation import
+
+#### packages/apps/CellBroadcastReceiver/
+* c5515d2 Automatic translation import
+
+#### packages/apps/Email/
+* 12eb636 Automatic translation import
+
+#### packages/apps/LockClock/
+* 536dda9 Automatic translation import
+
+#### packages/apps/Profiles/
+* 8ad3da8 Automatic translation import
+
+#### packages/apps/Recorder/
+* f5d35df Automatic translation import
+
+#### packages/apps/Settings/
+* 0e9baf6 Revert "Fix selection of animations"
+* 38288db Development: Allow all Masquerade calling packages for debugging (3/3)
+
+#### packages/apps/Terminal/
+* 1114a47 Automatic translation import
+
+#### packages/apps/UnifiedEmail/
+* 054b31c Automatic translation import
+
+#### packages/inputmethods/LatinIME/
+* 4648c8c Automatic translation import
+
+#### packages/providers/CalendarProvider/
+* 589b307 Automatic translation import
+
+#### packages/providers/DataUsageProvider/
+* 29af03a Automatic translation import
+
+#### packages/providers/DownloadProvider/
+* 7b08a35 Automatic translation import
+
+#### packages/providers/UserDictionaryProvider/
+* 7c49377 Automatic translation import
+
+#### packages/providers/WeatherProvider/
+* 5b6bf0d Automatic translation import
+
+#### packages/resources/devicesettings/
+* d928045 Automatic translation import
+
+#### packages/screensavers/PhotoTable/
+* e3516c5 Automatic translation import
+
+#### packages/services/CMAudioService/
+* de3f589 Automatic translation import
+
+#### packages/services/LiveLockScreenService/
+* bbb9d16 Automatic translation import
+
+#### packages/services/WeatherService/
+* 5b5e889 Automatic translation import
+
+#### packages/wallpapers/LivePicker/
+* 546b021 Automatic translation import
+
+#### vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
+* fa13abf Automatic translation import
+
+#### vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
+* 4d3a56b Automatic translation import
+
+03-08-2017
+============
+
+#### packages/apps/UnifiedEmail/
+* fc1125d Fix cut off notification sounds.
+
+#### packages/providers/MediaProvider/
+* 262a1de MediaProvider: Fix possible NPE
+
+03-07-2017
+============
+
+#### bootable/recovery/
+* 9664707 Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### external/boringssl/
+* 956cfef Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### external/libnfc-nci/
+* 9a85f1a Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### frameworks/base/
+* 43a91fa base: Force authorize all calling packages by Masquerade (2/3)
+* ed5d360 OMS7: Rootless Security Update Preparation for March 2017
+
+#### frameworks/opt/net/wifi/
+* 0c8a819 WifiStateMachine: Revert IpReachabilityMonitor handling changes
+* 6a3e585 Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### hardware/intel/common/libmix/
+* a8c22a8 Libmix : Add proper support for LP blobs Asus Zenfone 2 still needs the good old way of setting GrallocMod
+
+#### hardware/intel/common/omx-components/
+* 904d128 omx-ccomponents : Zenfone 2 cannot properly utilize flushmode switch to test HandleFormatchange() directly instead of testing flushmode
+
+#### hardware/intel/img/psb_video/
+* 2c744ac psb_video : remember good old moorefield
+
+#### hardware/ril-caf/
+* f9c5724 ril-caf: Fix crash when enabling RILC_LOG
+
+#### manifest/
+* b05d10f manifest: android-7.1.1_r21 -> android-7.1.1_r25
+* e5296f6 manifest: switch to interfacer rootless branch
+
+#### packages/apps/CertInstaller/
+* 938f77d Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### packages/apps/PackageInstaller/
+* 1c9fa2e Merge tag 'android-7.1.1_r25' into cm-14.1
+
+#### packages/apps/ThemeInterface/
+* e9e6979 Welcome to Theme Interfacer! [1/2]
+
+#### system/sepolicy/
+* 986ef88 Rename Masquerade to ThemeInterfacer [2/2]
+* cf8e60b sepolicy: Redo masquerade rules
+* 5ba0764  sepolicy: Attempt to fix bootanim
+* a940892 sepolicy: allow masquerade to read and write theme assets
+* ab08b28 sepolicy: rename masquerade domain and allow JobService in system_server
+* 93dcb7b initial policy edits for masquerade to operate rootless
+* 687905f sepolicy: fix themed sounds
+* 75a84b8 sepolicy: fix themed boot animation
+* 8b2ccb9 Introduce sepolicy exceptions for theme assets
+
+03-06-2017
+============
+
+#### packages/apps/OmniJaws/
+* b8bff80 OmniJaws: Clean up unused imports, simpify few things
+* 8e319b8 Merge "OmniJaws: Add menu item to search for Chronus icons" into android-7.1
+* 519caad OmniJaws: Add menu item to search for Chronus icons
+* 396a48a Merge "OmniJaws: manifest add DEFAULT category to activities" into android-7.1
+* 4c5eedf Fix potential actionbar npe
+* f6ad533 OmniJaws: manifest add DEFAULT category to activities
+

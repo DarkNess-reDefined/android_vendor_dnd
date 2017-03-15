@@ -46,7 +46,7 @@ echo ""
 echo ${cya}" ▼ Generating (for last 7 days) github format changelog.."${txtrst}
 echo ""
 echo >> $Changelog;
-echo "# $source_name Version 1.2 Changelog"    >> $Changelog;
+echo "# $source_name Version 1.3 Changelog"    >> $Changelog;
 echo '====================================================' >> $Changelog;
 echo >> $Changelog;
 
