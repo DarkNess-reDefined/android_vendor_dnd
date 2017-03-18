@@ -126,7 +126,6 @@ PRODUCT_PACKAGES += \
 
 # reDefined packages
 PRODUCT_PACKAGES += \
-    SnapdragonCamera \
     SnapdragonGallery \
     AboutDND \
     Launcher3 \
