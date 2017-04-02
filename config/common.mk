@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
+# DarkNess-reDefined packages
+PRODUCT_PACKAGES += \
+    Gallery2
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
