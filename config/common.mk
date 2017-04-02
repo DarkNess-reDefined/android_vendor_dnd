@@ -126,7 +126,7 @@ PRODUCT_PACKAGES += \
 
 # reDefined packages
 PRODUCT_PACKAGES += \
-    SnapdragonGallery \
+    Gallery2 \
     AboutDND \
     Launcher3 \
     DNDWalls \
