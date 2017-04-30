@@ -129,7 +129,8 @@ PRODUCT_PACKAGES += \
 
 # DarkNess-reDefined packages
 PRODUCT_PACKAGES += \
-    Gallery2
+    Gallery2 \
+    ViaBrowser
 
 # Exchange support
 PRODUCT_PACKAGES += \
