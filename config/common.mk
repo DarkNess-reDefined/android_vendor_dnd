@@ -132,6 +132,7 @@ PRODUCT_PACKAGES += \
     DNDWalls \
     OmniJaws \
     Phonograph \
+    Amaze \
     ViaBrowser
 
 # Custom CM packages
