@@ -99,8 +99,7 @@ include vendor/dnd/config/twrp.mk
 endif
 
 # Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+$(call inherit-product, vendor/dnd/prebuilt/common/bootanimation/bootanimation.mk)
 
 # Required Darkness-Redefined packages
 PRODUCT_PACKAGES += \
