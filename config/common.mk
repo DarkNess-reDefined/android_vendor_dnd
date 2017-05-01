@@ -93,8 +93,7 @@ include vendor/dnd/config/cmsdk_common.mk
 endif
 
 # Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+$(call inherit-product, vendor/dnd/prebuilt/common/bootanimation/bootanimation.mk)
 
 # Required CM packages
 PRODUCT_PACKAGES += \
