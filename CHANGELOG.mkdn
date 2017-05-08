@@ -375,190 +375,236 @@ CHANGELOG (notable new features)
 * ONE: Enabled native WiFi tethering - arcee
 =======
 
-# DarkNess reDefined Version 1.4 Changelog
+# DarkNess reDefined Version 1.5 Changelog
 ====================================================
 
-05-01-2017
+05-07-2017
 ============
 
-#### frameworks/base/
-* 6b4f11b base: Switch to pixel theme
-* 4f87c67 Pixel blue for globalActions silent mode selection indicator
-* b1fd1a4 Notifications: Materialize missed calls icons
-* 7b8ee6b base: Change toast frames color to some better look ones
-* 727b377 hwui: skip draw empty frame
-* 8e4bf44 MountService: Don't run benchmarks after trimming
-* 5741321 FATAL EXCEPTION IN SYSTEM PROCESS: android.ui
-* 1d1ca85 Add Sound tile to QS
-* 48267d8 Fix PacketKeepalive.stop() crash
-* 8636934 Fix NPE when call stack.setLaunchTime.
-* b3b7d4a Fix DateTimeView fc issue
-* 877da6d Fix a NPE with outlineProvider="none"
-* cf9b45f DisplayThread: use realtime scheduling
-* 1bf9f42 base: use real-time scheduling for the UI Thread
-* 8591819 aapt: enforce 0 compression
-* 261f5f4 aapt: allow opting out of uncompressed aapt
-* 13c7e4c Redundant waiting time of keyguard unlocking after reboot
-* d92e8d5 Make sure that the device name is not null before returning it
-* f7df36c Fix a null pointer exception in FragmentManager
-* 8328cbc Revert "Fix for wakelock being held during bootup and idle scenario."
-* 70b10a1 Skip send broadcast to the receiver whoes user has not started.
-* 495897a Add alarm fullscreen
-
-#### manifest/
-* 9f3bf01 manifest: ThemeInterfacer is a service
-
-#### packages/apps/PackageInstaller/
-* d7450a7 Fix build after merge
-
-#### vendor/cm/
-* d6427ac overlay: Add new default wallpaper
-* 0f5d19c bootanimation: Switch to DarkNess reDefined Animation
-* abb10ad prebuilt: Add turbo apk
-* 6da8f1b prebuilt: add missing amaze config
-
-04-30-2017
-============
-
-#### build/
-* 7c7e269 Revert "build: releasetools: ota: Add support for 32-64 bit upgrades"
-* 87a496c build: fix verity generation
-* da533d4 build: allow to disable recovery-two-step.img generation
+#### bionic/
+* aa43911 libc: ARM: Add 32-bit Kryo memcpy
+* 8d28c55 libc: use Cortex-A7/A53 memset on Kryo
+* d629ea5 Add kryo support.
 
 #### device/xiaomi/kenzo/
-* 562a15d dependencies: update branch
+* f5df17c @TheDarkStrix Thugness :3
 
-#### frameworks/native/
-* a260fc8 sensorservice: Register orientation sensor if HAL doesn't provide it
+#### device/xiaomi/msm8956-common/
+* c679e72 msm8956-common : delete lineage.dependencies
+
+#### frameworks/base/
+* a15d66d Fix for google backup and restore
+* abb0c58 Port "Battery Usage Alerts" feature from factory images to aosp
+* c82815d base: Improve secure lockscreen access with disabled QS
+* a5788d1 base: allow disabling quick settings on secure lockscreen [1/2]
+* d7066d1 Base: Update navigation button sizes and some drawables
+* 4c30c70 FWB: Disable/Enable screenshot sound leftover after rebasing
+* ef21c3f wifi: catch UnsupportedOperationException for getMatchingWifiConfig
+* 5a580f9 SettingsLib: wifi: Fixed AccessPoint tracking for Passpoint networks
+* 1661cb0 Destroy Allocation right away on exception
+* 99f9f37 Destroy Allocation with ScriptIntrinsicLut
+* 12420db The network event should be an asynchronous callback.
+* a58198251 Aapt2: Fix png leak
+* d40c93b StatusBar: Catch OOM caused by third-party icons
+* a5f7877 Add protected broadcast for app crash broadcast
+* abb1dcb Remove force weather update bits
+* 77de843 base: volume dialog: hide headers on all streams if requested
+* 91c2f88 SystemUI: AssistManager: create mView if null
+* cec9cf9 Merge tag 'android-7.1.2_r8' into n7x
+* c6d3c93 Automatic translation import
+* ca036f1 base: don't show reboot options for safe mode
+* 1fc1181 SystemUI: Use already existing overlay to show QS auto brightness
+* 4db9ac5 SystemUI: use vector drawables for brightness icons
+* 9152279 fix anr when concurrent request provider
+* d59bce1 Ensure that the decor view is attached to window.
+* 7da2ab3 Bad token of activity when do the launch work at the app process side.
+* 698f0dc Query geo description in worker thread to prevent ANR
+* 626b444 remove duplicated incorrectly code in ProcessRecord
+* 9150269 fix foreground process will be mistakenly killed when it uses content provider.
+* 86c75e5 Restart persistent process if start timeout.
+* c8f2f04 fix system_server crash issue caused by fd leak.
+* 871bbf0 base: LocationTile detail
+* f25553e Expose a bool to disable dynamic colors
+
+#### kernel/xiaomi/msm8956/
+* 1033b9e Script Update
 
 #### manifest/
-* 85e8b2b Track DeskClock
-* e9c9ba6 Update README
-* 8176381 manifest: Change our default branch
-* 99613c7 Manifest : Stop syncing blank intel sensor repo.
-* 480c17d manifest: Track lineage external/libchrome
-* 77b4f07 manifest: android-7.1.1_r25 -> android-7.1.2_r2
-
-#### packages/apps/DUI/
-* f610133 Fix DUI slippery flag logic and IllegalArgumentException [1/2]
-* b2ac39a Improve Pulse and MediaMonitor reliability
+* 344db43 manifest: android-7.1.2_r2 -> android-7.1.2_r8
 
 #### packages/apps/Settings/
-* 7d696ee Revert "Settings: Lost cached BT devices in found devices list"
-* 0cd78ff Settings[Wifi]: fix the input invalid length for WEP encryption.
-* 5ebd6cd Settings: Fix internal storage summary for non-emulated storage
-
-#### packages/services/Telephony/
-* 2d82def VoicemailSettingsActivity: Fix NPE
-* d121d66 telephony: fix crash when missing simcard
+* 4bbb867 UI Tab: allow disabling quick settings on secure lockscreen [2/2]
+* 667d00d UI Tab: Change smallest width string
+* 1792af6 Settings : Rebuild app list after reset
+* 50256b4 InstalledApp: show link to Google Play
+* a3095b1 Settings: background not set in main Settings screen
+* 5493a56 Get rid of framework holo actionbar buttons
+* 82d6e14 Settings: disable the other learn more too to prevent crash
+* 6a7e38f Settings: Wi-Fi WPS Materialized icon
+* 338f558 bluetooth: Show a refresh icon on the select devices screen
+* f5cb007 Add fastscroll to the Manage applications screen
+* 5294f15 Always show screen on time
+* 97521bb Settings: Tint Black Drawables
+* 38ee3d1 Title is different after tapping "Memory used by apps"
+* 3d11e80 Settings: display fstype for mounted volumes
+* 1fa5bab Show USB Mode Dialog
+* b4962d9 Settings: avoid a NullPointerException in security
+* b677b90 Port "Battery Usage Alerts" feature from factory images to aosp
+* 2c4d86e Redundant waiting time of keyguard unlocking after reboot
+* 6454b1d Settings: Expose "ALL" hardcoded and @android colors
+* 6d374ce Settings: Expose and add tint mode to custom icons
+* 22c5819 Settings: Expose styles in the manifest for themes
+* 1d807c8 Settings: Guard against themes without colorAccent defined
+* e7d3e4a Settings: Expose bluetooth pin confirm dialog text colors
+* 193d7d1 Expose switchbar background color
+* 91d91ec Expose dashboard category padding bottom
+* a74f82d Settings: Expose gesture settings switchbar
 
 #### vendor/cm/
-* 4a1265e Update magisk to v12.0
-* 0ec1c0e roomservice: update for n7x branch
-* 9f37019 Add ViaBrowser
+* 999f788 devices: Add oneplus3
+* 99176e8 backuptool: Fix for 7.1
 
-#### vendor/cmsdk/
-* 3159de3 Protect system profiles related broadcasts
-* 1202cfe PerformanceManager: Don't override the user preference
-* 605e6de PerformanceManager: Don't force powersave mode with powersave profile
+05-05-2017
+============
 
-04-29-2017
+#### kernel/xiaomi/msm8956/
+* e816dd1 gxfingerprint.default.so 30
+* 392e903 Netlink stuff
+* a5543bb maple-iosched: Fix the -Wdeclaration-after-statement warnings
+* b5ed3f6 block: maple: Fix inverted logic
+* 0b602b5 block: maple: Make bools constant across functions
+* 426f30d block: maple: Use native display state instead of PowerSuspend
+* 5a1bf68 block: maple: Serve asynchronous requests before synchronous ones
+* b0ea63e block: maple: Fix some logic, import former/latter request logic from SIO, and use some improved bits of SIO
+* d70069e block: maple: Catch writes_starved sooner, increase limit.
+* 8e8ae9d block: maple: Clean up and add patchlevel macro to keep track of commits
+* cd2abc1 block: maple: Remove CONFIG_HZ dependency, assume 300 for interrupt frequency
+* 6c58c5b block: Add Maple I/O Scheduler
+* 1ddd5d8 lazyplug: Turn off by default
+* 5cadf06 display: add a simple api to query the display state (on/off) at any point in time
+* 42ea816 Fix mismerge
+* 67e83f2 lazyplug: Add highly aggressive lazy profile
+* 56a56ff lazyplug: Use display_state hooks
+* d945b4d Enable lazyplug
+* 6f42be2 lazyplug: Add Hysteresis for Octacore CPUs
+* 008f72c sched: compatibility fix up for lazyplug
+* 22a3fee lazyplug: Remove wakeup_boost
+* 52fc9ed lazyplug: Remove Power/earlysuspend hooks
+* e14dd6e lazyplug: add mutex & boolean check for lazy mode
+* a979cef vidc: add lazyplug hooks
+* a7c98b6 lazyplug: separate thread for reducing wake-up delay
+* 15397c0 Introduce Lazyplug
+* 2580d0d usb: don't use PREPARE_DELAYED_WORK
+* 6c4291c msm: vidc: disable CPU L2 cache PC during video sessions
+* c52adc0 Arm64: Enable Dcache word access
+* c4a4dac drivers: fingerprint: boost tasks to the big cores when the scanner is used
+* 8ee5b07 drivers: fingerprint: boost cpufreq on unlock
+* 26d2a53 drivers: wakeup: block some bastard wakeups
+* 8074080 sched/fair: Implement fast idling of CPUs when the system is partially loaded
+* 957951e sched/idle: Avoid spurious wakeup IPIs
+* 0d29249 sched/rt: Reduce rq lock contention by eliminating locking of non-feasible target
+* 97ce6ab sched: Change autogroup_move_group() to use for_each_thread()
+* 1d50747 sched: Change thread_group_cputime() to use for_each_thread()
+* 504a680 sched: s/do_each_thread/for_each_process_thread/ in debug.c
+* 91fadf0 sched: s/do_each_thread/for_each_process_thread/ in core.c
+* ac98e67 sched: Fix exec_start/task_hot on migrated tasks
+* aa8efd3 sched: Queue RT tasks to head when prio drops
+* a1167da sched/core: Fix an SMP ordering race in try_to_wake_up() vs. schedule()
+* 1df3d95 sched/balancing: Reduce the rate of needless idle load balancing
+* 04ee12a sched/fair: Stop searching for tasks in newidle balance if there are runnable tasks
+* 41e398cd sched: Optimize task_sched_runtime()
+* 63e8ac6 Added fsync on/off support.
+* a2f0af7 Disable CRC
+* 0294e6b cpufreq: cache tunables for ondemand and conservative governors
+* 87e8560 Optimized Integer SQRT. for upto 3x faster operation
+* 8a95761 Add HID USB keyboard/mouse support
+* 6f9720e sched/fair: Avoid integer overflow
+* 7b22074 cputime: Fix jiffies based cputime assumption on steal accounting
+* 8a238ef ext4: Speedup WB_SYNC_ALL pass called from sync(2)
+* 6a299b19 tcp: enable sockets to use MSG_FASTOPEN by default
+* ab68fe6 xpad: update xpad driver (squash)
+* 7552c73 sound_control: add speaker gain
+* c4620b1 ASoC: wcd9335: add analog headphone gain
+* 676e4d9 ASoC: wcd9335: Sound control
+* e4badee msm: mdss: kcal: Only apply updates on index 0
+* 1d31fed msm: mdss: KCAL: Send a pp display commit when changes are made
+* 89662c9 msm: mdss: KCAL: Do not read from picture adjustment registers
+* 692d476 msm: mdss: KCAL: Read values from MDP registers wherever possible
+* fddf176 msm: mdss: KCAL: Apply default values on boot
+* 373ccf1 msm: mdss: KCAL: Queue changes when panel is powered off
+* 89ebf73 msm: mdss: KCAL: Remove MODULE_DESCRIPTION
+* d5f2e90 msm: mdss: KCAL: Update Kconfig description
+* 1505429 msm: mdss: KCAL: Update according to linux guidelines and checkpatch.pl
+* 438617c msm: mdss: KCAL: Check panel power state before applying values
+* e2ccce654 msm: mdss: KCAL: Allow kcal_enable to control all post-processing features
+* 3756a80 msm: mdss: Keep KCAL within its own source file
+* d5a6540 msm: mdss: Remove deprecated __dev* markings
+* 1bca9f4 msm: mdss: Add pa_v2 support to KCAL
+* 0c243a8 msm: mdss: Replace PGC implementation with PCC for KCAL
+* 1a996a4 msm: mdss: Add KCAL support for post processing control [v2]
+
+#### system/bt/
+* 0ebf465 Do not include the trailing NULL from the C-String in the SDP service name
+
+#### vendor/cm/
+* 33bdc98 Release AboutDND v1.4 - Auto update checking for AboutDND - read changelog link from https://github.com/DarkNess-reDefined/packages_apps_AboutDND/blob/n/changelog_details.xml
+
+05-04-2017
 ============
 
 #### bootable/recovery/
-* 5d701cc recovery: Complete project pathmap usage
-* 39ce741 Revert "recovery:updater: Changes to support 32->64 bit upgrades"
+* 616bf9a recovery: Fix event system
 
-#### device/qcom/common/
-* 0dc3673 recovery: Use project pathmap for recovery
+#### device/xiaomi/kenzo/
+* 4258b79 lol , my bad
+* 46375fc derps again
+* ff6539b Update dnd.dependencies
+* faf3b57 DarkNess-reDefined !
+* 1ae8747 kenzo: remove Sharp display calibration data
+* fa32ae3 Change kernel config
+* f737b29 Dont Vibrate [Wake up key] - This fixes random vibrations during voice calls
+* fb014cb Add Wake up key function to the Fingerprint Sensor
+* 1e29b8c Update Paths
 
-#### frameworks/base/
-* d57625f One handed mode toggle [1/3]
-* 878328f Revert "[1/3] base: single hand for hardware keys"
-* f9fe4d9 Replace VoLTE icon
-* 9f8ed10 Themes: Expose Keyboard Shortcuts Dialog
-* 7e355cb Custom carrier label and customization [1/2]
-* a690212 SmartBar: allow set custom buttons opacity when Pulse is active [3/3]
-* 69c8ab1 DocumentsUI: Hide icon from launcher
-* cacdb99 Status bar: Update notification count icons
-* 9d69973 Make roaming indicator optional [1/2]
-* 4b82619 Hold "volume up" during boot to disable all overlays
-* 8a66a0d Use rounded icons for a while
-* 3de6795 QS: Add back default tile
-* 1129565 TileAdapter: use colorPrimary for tile item decoration background
-* bfdfde6 Add Camera sound toggle [1/3]
-* 9bcefc2 DadZone: add missing call to TypedArray.recycle() to prevent leaks when restarting SystemUI for themes
-* 21281d4 SettingsProvider: Disable Package verifier
-* f8f9e5c SystemUI: Tiny expanding improvement
-* 8449b77 Allow themers to customize battery frame color on darkintensity
-* a6c5c35 Fix for wakelock being held during bootup and idle scenario.
-* 7b09759 Use the new radio_metadata wrapper for safer memory management [1/2]
-* 8ffd329 Enable multidex for SystemUITests
-* 21262f6 Define priority for callerinfo selection
-* 27de87c Fixes the thread-safe issue.
-* fc96f8e Skip task that has not real activities
-* 2768d5e Fix dead lock in Tethering state machine
-* de144cc Net monitor: fix visual glitch on statusbar expand when autohide enabled
+#### kernel/xiaomi/msm8956/
+* c555b55 Changing to 6 boot cpus to improve boot time.
+* cb0d66d Add exFAT support
+* 5e96841 Update zen io scheduler
+* a1162da block: zen: set fifo batch to 16 to reduce overload on eMMC and CPU.
+* 9f81d05 block: zen: crashing on selection fixup
+* ee1936d block: scheduler: add ZEN
+* 584f1c7 Add SIO and FIOPS i/o schedulers
+* c5ca07f leds: trigger: ledtrig-backlight: Fix invalid memory access in fb_event notification callback
+* 9f12bbe DTS: Fix Qualcomm Typo Error
+* 43acce2 Various Tweaks
+* 1c29b0f Increase max readahead value to 1024
+* 2d914245 Update GPU Bus Width
+* c72f9b6 drivers: camera: Fix derps in actuator
+* 62b2b77 Fix drop 2% battery
+* ddc9d6d msm: mpm: disable debugging
+* be2101a scripts: change 'host' & 'compiled by' strings without changing them on my vpn. Just cosmetical
+* 0ed221b qcom: msm-core: uninterruptible wait - you can kiss my arse goodbye
+* ac379a7 msm: Use interruptible wait to not affect load average
+* 420ad11 qcom: mpm: use interruptible wait to reduce load avg
+* febff1f sched/core: Fix a race between try_to_wake_up() and a woken up task
+* 7da2edf Remove '+' symbol from kernel version string
+* aaa13d7 Add additional files
+* cfed8d3 Script Updates
+* dca85cb Update Anykernel2 Script -Anykernel2 update & other updates Merge to latest changes(3 feb)
+* bd88559 Add build script and Anykernel2 script
+* df4d2c5 Make it kenzo_defconfig
 
-#### hardware/libhardware_legacy/
-* ec33ac3 wifi: add firmware loader support for the non-LKM case
+#### vendor/xiaomi/
+* e3e8808 Revert "Change goodix netlink group to 29, because it is conflit with wifi driver"
 
-#### packages/apps/MusicFX/
-* acca4f4 Better layout for the Reverb spinner
-* a3914c8 Theming: Center Visualizer view
-* 04bbf3c Theming: add missing reverb effects list background color
-
-#### packages/apps/Settings/
-* b1f6f73 Merge tag 'android-7.1.2_r2'
-* 261021d Custom carrier label and customization [2/2] Change-Id: I0207e4b0027fcbf68dbd4066ac65b55c9dbd29df
-
-#### system/extras/
-* f30ae7f Use project pathmap for recovery
-
-#### vendor/cm/
-* 78f8ccc charger: updates for 7.1.2 minui
-
-04-28-2017
+05-03-2017
 ============
+#### OTA_config/
+* 4000000 Update mido to v1.4 20170502
+* db22982 Update lettuce 02/05/2017
+* 8d17eb4 ota: add addison (Moto Z Play)
+* e1463c7 ota : add one plus 2
 
-#### packages/apps/MusicFX/
-* 815c1c2 Make MusicFX fully themeable
-
-#### packages/services/ThemeInterfacer/
-* 40e3809 JobService: Expose configuration shim refresh delay
-
-04-27-2017
-============
-
-#### frameworks/base/
-* 3de2807 SystemUI: Use AOSP AutoBrightness implementation
-* fe90135 Revert "SystemUI: [RJIL new function] AutoBrightness"
-* 81cc243 Revert "SystemUI: Fix QSTileHost exception"
-
-#### packages/apps/MusicFX/
-* aa0f126 Build as PRIVILEGED
-* e792433 Fix UI behavior for virtualizer effect
-* 4375fc6 MusicFX: Expose icon color
-
-#### packages/services/ThemeInterfacer/
-* 3f3c33b Add a looper to the locale change handler
-
-04-26-2017
-============
-
-#### packages/services/ThemeInterfacer/
-* 9936dc3 README: Recommend Interfacer be put in the services folder
-
-04-25-2017
-============
-
-#### frameworks/base/
-* d183b09 am: Handle unchecked activity starts for protected components (2)
-* 9cffad5 fix wrong algorithm in WifiPowerPerPacket()
-
-#### frameworks/opt/telephony/
-* bc43228 Create cdma dummy apns.
-
-#### packages/apps/MusicFX/
-* 231e20a MusicFX: Adjust colors
+#### bootable/recovery/
+* 8011e66 recovery: Fix UI freezing
 
