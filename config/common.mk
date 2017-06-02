@@ -269,13 +269,16 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
-# Magisk Manager
-PRODUCT_PACKAGES += \
+# Magisk
+ifeq ($(WITH_ROOT),true)
+ PRODUCT_PACKAGES += \
     MagiskManager
 
-# Copy Magisk zip
-PRODUCT_COPY_FILES += \
-    vendor/dnd/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+ PRODUCT_COPY_FILES += \
+   vendor/dnd/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+else
+$(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
+endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/dnd/overlay/common
 
