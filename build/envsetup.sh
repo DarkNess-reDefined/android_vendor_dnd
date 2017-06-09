@@ -63,15 +63,9 @@ function breakfast()
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
-
-            if ! check_product lineage_$target && check_product dnd_$target; then
-                echo "** Warning: '$target' is using DND-based makefiles. This will be deprecated in the next major release."
                 lunch dnd_$target-$variant
-            else
-                lunch lineage_$target-$variant
             fi
         fi
-    fi
     return $?
 }
 
