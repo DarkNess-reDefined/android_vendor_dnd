@@ -1,4 +1,4 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common DND stuff
+$(call inherit-product, vendor/dnd/config/common.mk)
 
 PRODUCT_SIZE := mini
