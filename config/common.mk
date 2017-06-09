@@ -130,15 +130,9 @@ PRODUCT_PACKAGES += \
 
 # Custom Darkness-Redefined packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     LineageSettingsProvider \
-    LineageSetupWizard \
-    Eleven \
     ExactCalculator \
-    Jelly \
     LockClock \
-    Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
