@@ -237,6 +237,14 @@ else
 $(warning you are not using dsp manager, please use 'WITH_DSPMANAGER := true' to define it)
 endif
 
+# AudioFX
+ifeq ($(WITH_AUDIOFX), true)
+PRODUCT_PACKAGES += \
+    AudioFX
+else
+$(warning you are not using audiofx, please use 'WITH_AUDIOFX := true' to define it)
+endif
+
 # Storage manager
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.storage_manager.enabled=true
