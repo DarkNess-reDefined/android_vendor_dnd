@@ -265,9 +265,6 @@ endif
 
 # Magisk
 ifeq ($(WITH_ROOT),true)
- PRODUCT_PACKAGES += \
-    MagiskManager
-
  PRODUCT_COPY_FILES += \
    vendor/dnd/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
 else
