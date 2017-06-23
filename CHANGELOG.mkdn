@@ -1,610 +1,207 @@
-LineageOS
-===============
 
-Visit http://github.com/LineageOS for full source and git access.
-
-Visit http://review.lineageos.org for our Gerrit instance.
-
-CHANGELOG (notable new features)
----------
-
-### 13.0 ZNH5Y
-* Common: Android 6.0.1 (Google)
-* Android Security Bulletin - August 1st update
-* Wi-Fi Tethering – automatically turn off hotspot after X minutes of inactivity
-* Profiles – add notification light controls
-* Do Not Disturb/Priority Mode – add notification light controls
-* Privacy Guard/App data usage – Restrict apps to Wi-Fi or Cellular data only or block all internet access, per app
-* Bluetooth Devices battery support
-* Lockscreen Wallpaper picker makes its return
-* Lockscreen Weather and new Weather plug in support
-* Lockscreen Blur support (on a per device basis) and the ability to disable the effect
-* Live Lockscreen support
-* New LiveDisplay hardware enhancements and API
-* Snap Camera (per device basis)
-* Gello Browser (per device basis)
-* Lots of translations
-* Cyanogen Apps support (x86 not supported yet)
-* Additional CM SDK APIs
-* Security fixes galore
-
-### 13.0 ZNH0E
-* Common: Android 6.0.1 (Google)
-* Android Security Bulletin - March 7th update
-* Settings > Build date - Triple tap to access demo mode
-* Settings > Memory - New screen to show memory usage over a selected period of time
-* Protected Apps - New folder UX, fingerprint support, enhanced ability to restrict access
-* New SMS/MMS application
-
-### 12.1 YOG4PAO3
-* Common: Android 5.1.1 (Google)
-* Android Security Bulletin – October 5th update
-
-### 12.1 YOG4PAO2
-* Common: Android 5.1.1 (Google)
-* New Devices: Andromax Q (rendang), Galaxy S5 China (kltechn), Galaxy S5 Duos (klteduos), Galaxy S5 Duos China (kltechnduo)
-* IMAP idle support
-* SDK v1 release
-* Stagefright security fixes
-
-### 12.0
-* Common: Android 5.0 (Google)
-
-### 11.0.0 M12
-* Common: Android 4.4.4 (Google)
-* patches against POODLE vulnerability in SSLv3
-* Multi-sim improvements throughout the OS experience
-
-### 11.0.0 M11
-* Common: Android 4.4.4 (Google)
-* New Devices: Galaxy S4 Active (jactivelte), Galaxy S4 SK I-9506 (ks01lte), Galaxy S5 GSM (klte), Galaxy Tab 10.1 (picassowifi), Galaxy Player 4.0 (ypg1)
-* Re-introduce Samsung Galaxy Relay 4G (apexqtmo) support
-* Fix signal strength showing ’2147483647′ on certain devices
-* Frameworks & Core Apps: CAF and other upstream updates
-* Lockscreen: Do not play sounds while a phone call is active & MSIM updates
-* Frameworks: Add base & MSIM APIs for SEEK (Secure Element Evaluation Kit) support
-* Frameworks: Fix volume button changing two ‘steps’ per click
-* Frameworks: Add ‘Screen Off’ action for double-tap/long-press configuration options
-* Show devices connected to your WiFi (tethering) Hotspot
-* Fix bug related to ‘switch to last app’ action while in Recents view
-* Fix Navigation Bar arrow keys in RTL locales
-* Translations updates from CyanogenMod CrowdIn team
-* Adjustments to ‘Glove Mode’ (High Touch Sensitivity)
-* APN Updates for various regions
-* Camera: Add support for all available Slow Shutter speeds (hardware dependent); Improve shutter button
-* Dialer/InCallUI: Fix smartcover always showing answer fragment
-* LG G2: Address GPS and NFC issues
-* Base support for HTC Desire 816 & HTC One Mini 2 (pending nightlies)
-* Various security updates
-* General bug fixes
-
-### 11.0.0 M10
-* Common: Android 4.4.4 (Google)
-* New Devices: Galaxy S5 Sprint (kltespr)
-* Split out Note 3 into GSM (hlte), Sprint (hltespr) and Verizon (hltevzw)
-* Refactor moto_msm8960dt as 'ghost' for Moto X 2013
-* Drop support for obake, toro, toroplus
-* Theme Engine: Themes support for additional UI elements
-* Frameworks & Core Apps: CAF and other upstream updates
-* Settings: Add scramble pin feature
-* Frameworks: Long press recent apps to switch to last used app
-* Settings: Add soft reboot option
-* Add smart cover support
-* Add glove mode support
-* Add bug reporter and crash log uploader
-* Multisim updates
-* General bug fixes
-* ANT+ Support for various hardware
-* Privacy Guard: Control NFC permissions
-
-### 11.0.0 M9
-* Common: Android 4.4.4 (Google)
-* New Devices: Sony Xperia Z2 Tablets (castor); HTC One (m8)
-* Theme Engine: Themes support for additional UI elements
-* Lockscreen: Allow doubletap to sleep when using secure keyguard
-* Settings: Safe Headset Volume – prompt when interfering with 3rd party device (Jawbone, Square, etc)
-* Settings: Center clock support
-* Settings: Proximity Wake-Up support
-* Settings: Spam notification filtering
-* Settings Search: Additional improvements and highlighting
-* Data Usage Info: Add support for CDMA devices without sim cards
-* Bluetooth: Add additional A2DP profiles
-* Bluetooth: Disable AVRCP 1.5 by default (fixes various car unit compatibility)
-* Email: Fix saving attachments to storage for POP3 accounts
-* Account for Play Services induced wake-locks
-* Fix encryption on some LG Devices
-* Dialer: add support for Korean and Chinese to smart-dialer
-
-### 11.0.0 M8
-* Common: Android 4.4.4 (Google)
-* New Devices: Sony Xperia Z2 (sirius); Xiaomi Mi2 (aries); Oppo Find 7a/s (find7); OnePlus One (bacon)
-* Common: Fix VPN issues related to 4.4.3 merge
-* Common: Enable 'Heads Up' notification mode (Settings > Notifications)
-* Settings: 'Interface' replaced by 'Status Bar', 'Notification Drawer', and 'Gestures'
-* Settings: Moved 'Expanded Desktop' to 'Display'
-* Settings: Moved all lock screen related items to 'Lock Screen' and removed duplicates from 'Security'
-* Settings: Moved 'Navigation Bar' layout control to 'Buttons'
-* Trebuchet: Custom Homescreen grid size
-* Trebuchet: Add Protected Apps feature
-* Trebuchet: Add Search Panel (Google Now) option
-* WhisperPush: No longer ignores 'Blacklist'
-* Futex: Protect against Towelroot
-* Various small bugfixes, global and device-specific
-
-### 11.0.0 M7
-* Common: Android 4.4.2 (Google)
-* New Devices: HTC One (m8); Samsung Galaxy Tab Pro 8.4 (mondrianwifi); Galaxy Note 8.0 LTE (n5120); LG G2 Docomo (l01f)
-* Common: Theme Chooser UI Overhaul
-* Common: Calculator app redesign (courtesy Xlythe)
-* Common: Performance Profiles
-* Common: Improved theming performance on low memory devices (~512MB RAM or less)
-* Trebuchet: Move settings to new slide-out panel
-* Trebuchet: Consolidate settings for home and drawer options
-* Media: Add FFMPEG support (expanded media format support)
-* Bluetooth: Improved support for new car audio systems and docks
-* Various small bugfixes, global and device-specific
-
-### 10.2.0
-* Common: Android 4.3 (Google)
-* Common: Privacy Guard 2.0 with AppOps
-* Common: Quick Settings Ribbon (replaces Notification Power Widgets)
-* Common: Hardware Tunables HAL
-* Common: Settings restructure
-* SMS: Voice+ (Google Voice integration)
-* SMS: Middleware layer
-* APN: World Phone Support (unified APN list)
-* Trebuchet: Universal Icon Pack support
-* Various small bugfixes, global and device-specific
-
-### 10.1.3
-* Common: CyanogenMod Account
-* Common: Privacy Guard
-* Common: Dialer blacklists
-* Common: Wake-on-Home
-* Common: QuickSettings camera
-* Common: Profile improvements
-* Various small bugfixes, global and device-specific
-
-### 10.1.2
-* Master Key #2 fix
-
-### 10.1.1
-* Master Key #1 fix
-
-### 10.1.0
-* Common: Android 4.2.2 (Google)
-* Common: cLock Lockscreen and Homescreen Widget
-* Common: Theme Engine Support
-* Common: Customize Navigation Bar (on devices without hardware keys)
-* Common: Customize Notification Light
-* Common: Display Battery Light
-* Common: Profiles with NFC support
-* Common: Customize Screen Rotation
-* Common: Notification Power Widgets
-* Common: DSP Manager
-* Common: Volume Rocker Wake
-* Common: Performance Settings (I/O Scheduler, CPU Governor, etc)
-* Quick Settings: Panel Customization
-* Quick Settings: Toggle QS panel with horizontal swipe
-* Quick Settings: Split QS actionable area
-* Quick Settings: Added QS Tiles
-* Status Bar: Hide or Show Clock
-* Status Bar: Battery Percentage and Circle Battery
-* Status Bar: Show Notification Counts
-* Status Bar: Signal Status Customization
-* Status Bar: Set Date and Time as buttons (with longpress actions)
-* Trebuchet: Launcher Updates
-* Lockscreen: Slider Shortcuts
-* Lockscreen: Maximize Widgets on Wake
-
-### 10.0.0
-* Common: Android 4.1.2 (Google)
-
-### 9.0.0
-* Common: Android 4.0.4 (Google)
-
-### 7.1.0
-* Common: Android 2.3.7 (Google)
-* Common: Bluetooth mouse support - Scott Brady
-* Common: Improve notification swipe-to-clear - Evan Charlton
-* Common: Improve album-artist support in media scanner - Paul Crovella
-* Common: Profile improvements and bugfixes - Martin Long, Danny Baumann, Robert Burns
-* Common: RTL text improvements - Eyad Aboulouz, Eran Mizrahi
-* Common: Wake on volume key option - Sven Dawitz
-* Common: Support for revoking application permissions - Plamen K. Kosseff
-* Common: Latest Superuser app - ChainsDD
-* Common: Control brightness by sliding on statusbar - Danesh M
-* Common: Add "copy all" to context menu - Danesh M
-* Common: Lockscreen haptic and statusbar indicators toggle - Danesh M
-* Common: Nicer timepicker/datepicker - Jiri Tyr
-* Common: Configuration 0/90/180/270 rotation - Jonas Larsson, Scott Brady
-* Common: DSP Manager bugfixes and improvements - Antti S Lankila
-* Common: Support for launching apps via gestures in the background - Jiri Tyr
-* Common: Option to hide hold button during call - Roberto Leinardi
-* Common: Allow using wildcards for call blacklisting - Nihanth Subramanya
-* Common: Option to allow in-call lockscreen to match main lockscren - Sven Dawitz
-* Common: Option to notify about incoming call only in background when screen is on - Pavel Kucera
-* Common: ADWLauncher- Transitions, catalog improvements, bugfixes - John Van Etten
-* Common: Optional GMT correction for SMS/MMS timestamps - Terry Hau
-* Common: Add FM Seek for TI devices - KalimochoAz
-* Common: Add FM support for SI4708 devices (Blade, V9, Racer) - Stéphane Konstantaropoulos
-* Common: Add FM seek implementation to FM application - Tom Giordano
-* Common: Show current FM status on lockscreen - Tom Giordano
-* Common: Camera touch-to-focus - cyanogen, arcee, m0viefreak, Danny Baumann
-* Common: Screenshot feature via power menu - arcee
-* Common: WEBP backport - Vikas Arora
-* Common: Add CM copyright noticies - arcee
-* Common: Skia/Zlib/libcore ARM optimizations - 0xlab
-* Common: Bluetooth tethering - Stéphane Konstantaropoulos
-* Common: Lockscreen widget alignment - Danesh Mondegarian
-* Common: Lockscreen calendar - David Morgan
-* Common: AVRCP 1.3 support - Qualcomm (bugfix by Danny Baumann)
-* Common: LED notification overhaul - Danny Baumann
-* Common: System-wide DNS cache - Google, SEMC
-* Common: Headset icon toggle - Cameron Pickett
-* Common: FM seek support - Emilio López, Tom Giordano
-* Common: Editable event fields in Contacts app - Danny Baumann
-* Common: Remove compromised CA from system certs - Guardian Project
-* Common: Mute camera shutter option - George Maizel
-* Common: Camera timer - Danesh Mondegarian
-* Common: "Mark all read" option in MMS - Vinod Surendran
-* Common: "eat" pushes fresh brunch/breakfast to device - Ricardo Cerqueira
-* Common: Customizable account color chip in Email - copolii
-* Common: "Rings" lockscreen - Valera Trubachev
-* Click, Motorola: Speed up photo recording - Emilio López
-* Click, Motorola: Add Geolocation to photo app - KalimochoAz
-* Click: Upgraded kernel from HTC 2.6.29 to 2.6.35
-* HTC msm7x30: 2.6.35 kernel and updated userspace
-* Buzz: 2.6.35 kernel - Arne Coucheron
-* Bravo(c)/Vivo(w)/Ace/Liberty: On charge notification led - Richard Antony Burton
-* Crespo/Crespo4G: Kernel update 2.6.35.14 and more, voodoo implementation, BLN, BLX...
-* Encore: Update kernel from 2.6.29 to 2.6.32 - Dalingrin,Fattire,Verygreen
-* Encore: New GPU drivers and userspace libs
-* Encore: Adjustable clockspeed and voltage - Dalingrin
-* Encore: Backport 2.6.35 Bluetooth - Fattire
-* Encore: Working mem sleep
-* Encore: USB host support - Verygreen
-
-### 7.0.3
-* Common: Don't allow packages with platform keys on user-controlled storage
-
-### 7.0.2
-* Common: Fix issue with missing built-in themes
-* Common: Update bundled ROM Manager to latest version
-* Supersonic: Actually fix GPS
-* Supersonic: Fix proximity and light sensor
-
-### 7.0.1
-* Common: Fix fling velocity of status bar and ADW swipe - Sven Dawitz
-* Common: Fixed webview layout bug (issue 3229) - Zinx
-* Common: Fix GVoice-opens-twice bug - Zinx
-* Common: Fix issues on all devices with DNS resolution failure after some time - Zinx, various
-* Common: RTL improvements - Eran Mizrahi, Eyad Aboulouz
-* Common: Fix crashes in Arabic locale - Eyad Aboulouz
-* Common: Add Arabic keylayout - Eyad Aboulouz
-* Common: Improve ADWLauncher scrolling/zoom performance - Pavel Kucera
-* Common: Fix excessive memory use when appending to textviews - Cyanogen
-* Common: New wallpapers from the CM community (CC License, see app for credits)
-* Common: Option to disable vibration while in-call - Evan Charlton
-* Common: Add long press option to status bar widgets for settings - Alex Avance
-* Common: Compact carrier and status bar tweaks - Nihanth Subramanya, rorifree
-* Sholes: Fix connectivity loss bug - cvpcs
-* Speedy: Fix keyboard lights - JD Horelick
-* Glacier: Fix backlights - Zinx
-* Glacier: fix GPS issues - Zinx/QCom
-* msm7x30: Fix bugs during video resume - Zinx
-* qsd8x50: Fix 720p video playback
-* qsd8x50: Unified 2.6.37 kernel - Cyanogen, toastcfh, slayher
-* Espresso, Legend: WiFi fix (HTC)
-* Supersonic: Fix GPS issues (HTC)
-* msm7227: Fix GPS issues - Alex Hofbauer
-* Click: Fix recovery kernel and compilation. Now works well with latest code - KalimochoAz
-* Click: Speed up internet connection - KalimochoAz
-* Blade: Update kernel to match Gen2 Radio - kallt_kaffe
-* Blade: Update libaudio to fix SIP audio routing and microphone mute - Tom Giordano
-
-### 7.0.0
-* Common: Android 2.3.3 (Gingerbread) - Google
-* Common: Fixes and changes from AOSP master - Various
-* Common: ClockworkMod Recovery 3.0: Koush, Cyanogen, Zinx
-* Common: Themes engine - T-Mobile
-* Common: Performance enhancements for Qualcomm hardware - Code Aurora
-* Common: New boot animation - 73v1n - http://www.youtube.com/watch?v=mYXiKWwp0DQ
-* Common: Fix readahead values for NAND/MMC devices
-* Common: Revamped notification widget - cvpcs
-* Common: Updated various graphics for GB style - blunden
-* Common: DSPManager updated for 2.3 - alankila
-* Common: Restyled music app and forward-port of features - Jason Asher
-* Common: Rotary answer in Phone app - James Peterson
-* Common: BT VoiceDialer fixes - Matthew Sparby
-* Common: Calendar enhancements - James Peterson
-* Common: Stagefright fixes for 7x30, 8x50, and 7x27 - Zinx, arcee, Cyanogen
-* Common: Pacman package manager - Kmobs
-* Common: Workaround for unknown phone number - Jiri Tyr
-* Common: Trackball answer/hangup - Juan Rodriguez
-* Common: CMParts reorganization - Robert Burns
-* Common: View ChangeLog via CMParts (System) - Wes Garner
-* Common: Optional screen on/off animations - Diogo Ferreira
-* Common: New browser incognito mode - optedoblivion
-* Common: New trackball/trackpad wake - Zinx, Cyanogen
-* Common: Legacy sensor/GPS support - arcee
-* Common: Enabled v8 javascript engine on armv6 (msm7227/msm7225) - arcee
-* Common: Customizable overscroll - arcee
-* Common: Torch cleanup - defer
-* Common: 2D compositor backwards compatibility - arcee
-* Common: OpenGL backwards compatibility - Zinx, Cyanogen, Sileht, ezterry
-* Common: SMS templates using gestures - Riccardo Ciovati
-* Common: Phone Goggles - David Bidorff
-* Common: Option to always show battery percentage on lockscreen - Robert Burns
-* Common: Option to show music controls with compatible headset connection - Wes Garner
-* Common: CPU frequency/scaling control in CMParts - Robert Ramiega
-* Common: Option to pause/play music with camera button - cvpcs
-* Common: Allow SIP User-Agent configuration - arcee
-* Common (non-HTC): Fixed mobile connection suspension - arcee
-* Common: New music widgets - Jason Asher
-* Common: Updated FLAC support - cvpcs, Cyanogen, kroot
-* Common: Updated wallpapers - Fitsnugly, Prash
-* Common: Customizable search/long-press search - Sven Dawitz
-* Common: New lockscreen styles - Rotary Revamped (default) and Lense - Sven Dawitz, Stefano Pignataro
-* Common: Customizable app launcher on rotary lockscreen - Sven Dawitz
-* Common: Now playing and album art on lockscreen - kmobs
-* Common: GPS fixes - CodeAurora, arcee
-* Common: Breakfast/Brunch - arcee
-* Common: Statusbar battery percentage with mini icon - Sven Dawitz, design by Jazz Kalsi
-* Common: SMS split for braindead carriers - Mike Wielgosz
-* Common: MMS user-defined custom vibrate - Wes Garner
-* Common: CMParts cleanup - Sven Dawitz
-* Common: Notification profiles - Martin Long
-* Common: TI wl12xx FM radio reverse engineering - Michael A. Reid
-* Common: Tablet tweaks - Sven Dawitz
-* Common: Revamped CMStats - Chris Soyars
-* Common: Improved RTL text support and fonts - Eyad Aboulouz, Eran Mizrahi,
-* Espresso/Legend: Enabled native WiFi tethering - Cyanogen, OMAPZoom.org
-* Legend/Liberty/Buzz/Click: Enabled FM Radio - Alexander Hofbauer (libaudio patch)
-* Z71: Enabled MPEG4/AAC video recording - arcee
-* Z71: Enabled native WiFi tethering - arcee
-* Passion/Bravo/BravoC/Supersonic/Inc: Kernel 2.6.37 - Google, Cyanogen, defer, Kali-, toastcfh, slayher
-* Vision/Glacier/Espresso: WiFi calling compatibility and optimization - Zinx
-* Vision/Glacier/Ace: Unified kernel - HTC, Cyanogen, Zinx, Kali-, defer
-* Vision/Glacier/Ace: Fix FM radio on 2.3 - Zinx
-* Vision/Glacier/Ace: Fixes for video overlay - Zinx, CodeAurora
-* Vision: Only install WiFi calling on TMUS devices - attn1
-* Espresso/Legend/Liberty: Unified kernel - HTC, Cyanogen, attn1, jznomoney, Alexander Hofbauer
-* Supersonic: WiMAX support - HTC, Shinzul, toastcfh, shift, #teamwin, Cyanogen, Joey Conway
-* Supersonic: HDMI mirror support: #teamwin
-* ONE: Enabled native WiFi tethering - arcee
-=======
-
-# DarkNess reDefined Version 1.5 Changelog
+# DarkNess reDefined Version 2.0 Changelog
 ====================================================
 
-05-07-2017
+06-23-2017
+============
+
+#### build/
+* e1744d2d7 Product: Delete this call from build
+
+#### frameworks/base/
+* 733028cd98b FWB :SmartBar Button Tint [1/3] With Reference to Patch AICP/frameworks_base@85d97f4
+* c911b034492 FWB:Add a Switch to Enable Disable Dynamic Navbar[1/2]
+
+#### hardware/qcom/fm/
+* 4c2e39e Automatic translation import
+
+#### manifest/
+* 42395ef manifest: track audiofx again
+
+#### packages/apps/Bluetooth/
+* 7f2b5c8c Automatic translation import
+
+#### packages/apps/Calendar/
+* ca094f37 Automatic translation import
+
+#### packages/apps/CellBroadcastReceiver/
+* ebf9e97 Automatic translation import
+
+#### packages/apps/Launcher3/
+* b72d39424 Launcher3: bring back pulldown to open notifications panel
+* 7e664dd5b Launcher3: animate workspace when animating the Google now page
+* 08fd9155e LauncherClient: make sure service is connected before trying to unbind
+
+#### packages/apps/LockClock/
+* b41c0d7 Automatic translation import
+
+#### packages/apps/Recorder/
+* 67d5b07 Automatic translation import
+
+#### packages/apps/Settings/
+* b538475351 Arena: Organize tabs
+* b0a37d2f46 Some string changes
+* 20a4e5c42b Arena: Smartbar Button Tint [3/3]
+* f58e69ff3f Arena: Add a Switch to Enable Disable Dyanamic Navbar[2/2]
+
+#### packages/apps/Terminal/
+* a2a05d2 Automatic translation import
+
+#### packages/inputmethods/LatinIME/
+* 3e047b887 Automatic translation import
+
+#### packages/providers/DownloadProvider/
+* 30cc23d Automatic translation import
+
+#### packages/resources/devicesettings/
+* 75498f7 Automatic translation import
+
+#### vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
+* dd1766a Automatic translation import
+
+#### vendor/dnd/
+* 5e2a1bd7 changelog_generator: cm -> dnd
+* 1fb6f03d vendor: Add script
+* f87b1ea1 vendor: product: Add Audiofx again
+* facbbd07 vendor: product: MusicFx comes with dsp manager
+
+06-22-2017
+============
+
+#### packages/apps/DUI/
+* 40e25cb SmartBar editor: block quick popup when dragging the button
+* 70d85ae Update RU translations
+* 6500eb9 French Translations
+* bb08320 French Translations
+* 45be6a5 Update RU translations
+* 8dd8ac1 Fix Fling swipe up gesture being hard to trigger
+* 214691b Smarbar Tint: Use Multiply Color filter
+* c4e872f DUI :SmartBar Button Tint [2/3]
+
+06-21-2017
+============
+
+#### packages/providers/MediaProvider/
+* fadf365 MediaProvider: Fix where condition of delete queries
+
+06-20-2017
 ============
 
 #### bionic/
-* aa43911 libc: ARM: Add 32-bit Kryo memcpy
-* 8d28c55 libc: use Cortex-A7/A53 memset on Kryo
-* d629ea5 Add kryo support.
-
-#### device/xiaomi/kenzo/
-* f5df17c @TheDarkStrix Thugness :3
-
-#### device/xiaomi/msm8956-common/
-* c679e72 msm8956-common : delete lineage.dependencies
+* d649844e7 Eliminate deadlock in forked child due to delayed resetting mutex lock
+* 1621cb156 The default locale "" should be a UTF-8 locale.
+* fd11967c5 Improve handling of clang
 
 #### frameworks/base/
-* a15d66d Fix for google backup and restore
-* abb0c58 Port "Battery Usage Alerts" feature from factory images to aosp
-* c82815d base: Improve secure lockscreen access with disabled QS
-* a5788d1 base: allow disabling quick settings on secure lockscreen [1/2]
-* d7066d1 Base: Update navigation button sizes and some drawables
-* 4c30c70 FWB: Disable/Enable screenshot sound leftover after rebasing
-* ef21c3f wifi: catch UnsupportedOperationException for getMatchingWifiConfig
-* 5a580f9 SettingsLib: wifi: Fixed AccessPoint tracking for Passpoint networks
-* 1661cb0 Destroy Allocation right away on exception
-* 99f9f37 Destroy Allocation with ScriptIntrinsicLut
-* 12420db The network event should be an asynchronous callback.
-* a58198251 Aapt2: Fix png leak
-* d40c93b StatusBar: Catch OOM caused by third-party icons
-* a5f7877 Add protected broadcast for app crash broadcast
-* abb1dcb Remove force weather update bits
-* 77de843 base: volume dialog: hide headers on all streams if requested
-* 91c2f88 SystemUI: AssistManager: create mView if null
-* cec9cf9 Merge tag 'android-7.1.2_r8' into n7x
-* c6d3c93 Automatic translation import
-* ca036f1 base: don't show reboot options for safe mode
-* 1fc1181 SystemUI: Use already existing overlay to show QS auto brightness
-* 4db9ac5 SystemUI: use vector drawables for brightness icons
-* 9152279 fix anr when concurrent request provider
-* d59bce1 Ensure that the decor view is attached to window.
-* 7da2ab3 Bad token of activity when do the launch work at the app process side.
-* 698f0dc Query geo description in worker thread to prevent ANR
-* 626b444 remove duplicated incorrectly code in ProcessRecord
-* 9150269 fix foreground process will be mistakenly killed when it uses content provider.
-* 86c75e5 Restart persistent process if start timeout.
-* c8f2f04 fix system_server crash issue caused by fd leak.
-* 871bbf0 base: LocationTile detail
-* f25553e Expose a bool to disable dynamic colors
-
-#### kernel/xiaomi/msm8956/
-* 1033b9e Script Update
-
-#### manifest/
-* 344db43 manifest: android-7.1.2_r2 -> android-7.1.2_r8
+* 336fe30d50d SystemUI: force a clock update if the screen is turned back on
+* fbbc92c5605 Optimised hwui rounded corners shader
+* 609ce328a97 fingerprint: Speed up wake-and-unlock scenario
+* 27f8f8eb901 GlobalActions: Confirm power off
+* dee8a9098f0 sensors: fix native crash when dynamic sensor is removed
+* c5d19b88ea0 sensors: intern jstrings for memory savings
+* d32f970e52a Fix the Wi-Fi wrong status when turning Wi-Fi on
+* 292d4eefcfc Check and send usb state broadcast when devices boots
 
 #### packages/apps/Settings/
-* 4bbb867 UI Tab: allow disabling quick settings on secure lockscreen [2/2]
-* 667d00d UI Tab: Change smallest width string
-* 1792af6 Settings : Rebuild app list after reset
-* 50256b4 InstalledApp: show link to Google Play
-* a3095b1 Settings: background not set in main Settings screen
-* 5493a56 Get rid of framework holo actionbar buttons
-* 82d6e14 Settings: disable the other learn more too to prevent crash
-* 6a7e38f Settings: Wi-Fi WPS Materialized icon
-* 338f558 bluetooth: Show a refresh icon on the select devices screen
-* f5cb007 Add fastscroll to the Manage applications screen
-* 5294f15 Always show screen on time
-* 97521bb Settings: Tint Black Drawables
-* 38ee3d1 Title is different after tapping "Memory used by apps"
-* 3d11e80 Settings: display fstype for mounted volumes
-* 1fa5bab Show USB Mode Dialog
-* b4962d9 Settings: avoid a NullPointerException in security
-* b677b90 Port "Battery Usage Alerts" feature from factory images to aosp
-* 2c4d86e Redundant waiting time of keyguard unlocking after reboot
-* 6454b1d Settings: Expose "ALL" hardcoded and @android colors
-* 6d374ce Settings: Expose and add tint mode to custom icons
-* 22c5819 Settings: Expose styles in the manifest for themes
-* 1d807c8 Settings: Guard against themes without colorAccent defined
-* e7d3e4a Settings: Expose bluetooth pin confirm dialog text colors
-* 193d7d1 Expose switchbar background color
-* 91d91ec Expose dashboard category padding bottom
-* a74f82d Settings: Expose gesture settings switchbar
+* 077f086293 Fix ApplicationsState.Session memory leak in settings app
+* a0ceb101e1 Fix the momery leak in DrawOverlayDetails
 
-#### vendor/cm/
-* 999f788 devices: Add oneplus3
-* 99176e8 backuptool: Fix for 7.1
+#### system/core/
+* dae84af6d healthd: fix include paths
+* 22580881f Filter GalleryDatab*
+* f45280049 Silence spammy logs from camera blobs (AEC_PORT and mm-camera)
 
-05-05-2017
+06-19-2017
 ============
 
-#### kernel/xiaomi/msm8956/
-* e816dd1 gxfingerprint.default.so 30
-* 392e903 Netlink stuff
-* a5543bb maple-iosched: Fix the -Wdeclaration-after-statement warnings
-* b5ed3f6 block: maple: Fix inverted logic
-* 0b602b5 block: maple: Make bools constant across functions
-* 426f30d block: maple: Use native display state instead of PowerSuspend
-* 5a1bf68 block: maple: Serve asynchronous requests before synchronous ones
-* b0ea63e block: maple: Fix some logic, import former/latter request logic from SIO, and use some improved bits of SIO
-* d70069e block: maple: Catch writes_starved sooner, increase limit.
-* 8e8ae9d block: maple: Clean up and add patchlevel macro to keep track of commits
-* cd2abc1 block: maple: Remove CONFIG_HZ dependency, assume 300 for interrupt frequency
-* 6c58c5b block: Add Maple I/O Scheduler
-* 1ddd5d8 lazyplug: Turn off by default
-* 5cadf06 display: add a simple api to query the display state (on/off) at any point in time
-* 42ea816 Fix mismerge
-* 67e83f2 lazyplug: Add highly aggressive lazy profile
-* 56a56ff lazyplug: Use display_state hooks
-* d945b4d Enable lazyplug
-* 6f42be2 lazyplug: Add Hysteresis for Octacore CPUs
-* 008f72c sched: compatibility fix up for lazyplug
-* 22a3fee lazyplug: Remove wakeup_boost
-* 52fc9ed lazyplug: Remove Power/earlysuspend hooks
-* e14dd6e lazyplug: add mutex & boolean check for lazy mode
-* a979cef vidc: add lazyplug hooks
-* a7c98b6 lazyplug: separate thread for reducing wake-up delay
-* 15397c0 Introduce Lazyplug
-* 2580d0d usb: don't use PREPARE_DELAYED_WORK
-* 6c4291c msm: vidc: disable CPU L2 cache PC during video sessions
-* c52adc0 Arm64: Enable Dcache word access
-* c4a4dac drivers: fingerprint: boost tasks to the big cores when the scanner is used
-* 8ee5b07 drivers: fingerprint: boost cpufreq on unlock
-* 26d2a53 drivers: wakeup: block some bastard wakeups
-* 8074080 sched/fair: Implement fast idling of CPUs when the system is partially loaded
-* 957951e sched/idle: Avoid spurious wakeup IPIs
-* 0d29249 sched/rt: Reduce rq lock contention by eliminating locking of non-feasible target
-* 97ce6ab sched: Change autogroup_move_group() to use for_each_thread()
-* 1d50747 sched: Change thread_group_cputime() to use for_each_thread()
-* 504a680 sched: s/do_each_thread/for_each_process_thread/ in debug.c
-* 91fadf0 sched: s/do_each_thread/for_each_process_thread/ in core.c
-* ac98e67 sched: Fix exec_start/task_hot on migrated tasks
-* aa8efd3 sched: Queue RT tasks to head when prio drops
-* a1167da sched/core: Fix an SMP ordering race in try_to_wake_up() vs. schedule()
-* 1df3d95 sched/balancing: Reduce the rate of needless idle load balancing
-* 04ee12a sched/fair: Stop searching for tasks in newidle balance if there are runnable tasks
-* 41e398cd sched: Optimize task_sched_runtime()
-* 63e8ac6 Added fsync on/off support.
-* a2f0af7 Disable CRC
-* 0294e6b cpufreq: cache tunables for ondemand and conservative governors
-* 87e8560 Optimized Integer SQRT. for upto 3x faster operation
-* 8a95761 Add HID USB keyboard/mouse support
-* 6f9720e sched/fair: Avoid integer overflow
-* 7b22074 cputime: Fix jiffies based cputime assumption on steal accounting
-* 8a238ef ext4: Speedup WB_SYNC_ALL pass called from sync(2)
-* 6a299b19 tcp: enable sockets to use MSG_FASTOPEN by default
-* ab68fe6 xpad: update xpad driver (squash)
-* 7552c73 sound_control: add speaker gain
-* c4620b1 ASoC: wcd9335: add analog headphone gain
-* 676e4d9 ASoC: wcd9335: Sound control
-* e4badee msm: mdss: kcal: Only apply updates on index 0
-* 1d31fed msm: mdss: KCAL: Send a pp display commit when changes are made
-* 89662c9 msm: mdss: KCAL: Do not read from picture adjustment registers
-* 692d476 msm: mdss: KCAL: Read values from MDP registers wherever possible
-* fddf176 msm: mdss: KCAL: Apply default values on boot
-* 373ccf1 msm: mdss: KCAL: Queue changes when panel is powered off
-* 89ebf73 msm: mdss: KCAL: Remove MODULE_DESCRIPTION
-* d5f2e90 msm: mdss: KCAL: Update Kconfig description
-* 1505429 msm: mdss: KCAL: Update according to linux guidelines and checkpatch.pl
-* 438617c msm: mdss: KCAL: Check panel power state before applying values
-* e2ccce654 msm: mdss: KCAL: Allow kcal_enable to control all post-processing features
-* 3756a80 msm: mdss: Keep KCAL within its own source file
-* d5a6540 msm: mdss: Remove deprecated __dev* markings
-* 1bca9f4 msm: mdss: Add pa_v2 support to KCAL
-* 0c243a8 msm: mdss: Replace PGC implementation with PCC for KCAL
-* 1a996a4 msm: mdss: Add KCAL support for post processing control [v2]
+#### frameworks/base/
+* f037c8d9563 Only send usb disconnect intents after boot.
+* b25052cce7f fix KeyEvent can't correctly finish when inputmethod time out happened
+* dd25dcaf667 Fix an apk icon animation corruption issue
+* af78a798e28 Fix crash by IllegalStateException in sendAccessibilityEvent
+* bce75082431 Clean up pending broadcast receivers when force stopping package
+* a9ae28d3152 Fix memory leak in WifP2pManager
+* fbb4476e752 Reduce MTU Size
+* d9d828412dd Fix TaskRecord wrong dump element firstActiveTime
+* 6214ac5d5db KernelCpuSpeedReader: Account for missing sysfs nodes
+* 5e90f296d53 Fix batterySendBroadcast not synchronized issue.
+* 033cb91ce77 bless python versions newer than 2.6
+* fa85b181b61 Handle ActivityNotFoundException for contacts activity
+* f717fda2b62 extend PreferenceActivity for title text on a single pane mode
+* cf015f3cfe1 Override onRestoreInstanceState() in MultiSelectListPreference
+* 5ea0a143c0e Fragment animations are not being saved across configuration changes
+* 19ac93475e0 Fix to NullPointerException when activity is relaunched
+* bc3047d75c1 Fix right mLastTimeUsed when aggregate UsageStats
+* b14a268f01c Fix ListView is not scrolled properly with arrows
+* cb046017856 Synchronize access of mSubscriptions
+* ab48ed28281 Provide synchronization to setview to avoid NPE
+* d5b0f667e47 AsyncTask: Fix to remove canceled tasks from executor's queue.
+* ef4e6a8683d frameworks/base: Fix to avoid crash when the tab is not set from app
+* 0e7eaf39510 IInputMethodWrapper to recycle SomeArgs in all cases.
+* 9038056411c Catch corruptexception during Transaction operation
+* 5bf9d755353 Fix force idle issue
+* c4864abe8c3 preloaded drawables few
+* f13f3550710 Schedule agentDisconnected() in handler thread
+* 0b3acc7ab6a Fix PrcessRecord.renderThreadTid not reset in some case.
+* 739cbebfb73 SoundPool: decrease binder call when calling SoundPool.play
+* ee289a39dd3 Net monitor: fix arrows not showing when data saver is enabled
 
-#### system/bt/
-* 0ebf465 Do not include the trailing NULL from the C-String in the SDP service name
+#### hardware/qcom/bt-caf/
+* 6473ddb Merge tag 'LA.UM.5.5.r1-04900-8x96.0' into HEAD
 
-#### vendor/cm/
-* 33bdc98 Release AboutDND v1.4 - Auto update checking for AboutDND - read changelog link from https://github.com/DarkNess-reDefined/packages_apps_AboutDND/blob/n/changelog_details.xml
-
-05-04-2017
+06-18-2017
 ============
 
-#### bootable/recovery/
-* 616bf9a recovery: Fix event system
+#### build/
+* bbc0a8752 Revert "Preventing default locale from being overridden because of buildinfo.sh"
+* ce6590970 Revert "build: skip 'ro.product.device' using  new macro "TARGET_SKIP_PRODUCT_DEVICE""
 
-#### device/xiaomi/kenzo/
-* 4258b79 lol , my bad
-* 46375fc derps again
-* ff6539b Update dnd.dependencies
-* faf3b57 DarkNess-reDefined !
-* 1ae8747 kenzo: remove Sharp display calibration data
-* fa32ae3 Change kernel config
-* f737b29 Dont Vibrate [Wake up key] - This fixes random vibrations during voice calls
-* fb014cb Add Wake up key function to the Fingerprint Sensor
-* 1e29b8c Update Paths
+#### device/qcom/common/
+* 5985a61 power: Use the correct opcode for STOR_CLK_SCALE_DIS
 
-#### kernel/xiaomi/msm8956/
-* c555b55 Changing to 6 boot cpus to improve boot time.
-* cb0d66d Add exFAT support
-* 5e96841 Update zen io scheduler
-* a1162da block: zen: set fifo batch to 16 to reduce overload on eMMC and CPU.
-* 9f81d05 block: zen: crashing on selection fixup
-* ee1936d block: scheduler: add ZEN
-* 584f1c7 Add SIO and FIOPS i/o schedulers
-* c5ca07f leds: trigger: ledtrig-backlight: Fix invalid memory access in fb_event notification callback
-* 9f12bbe DTS: Fix Qualcomm Typo Error
-* 43acce2 Various Tweaks
-* 1c29b0f Increase max readahead value to 1024
-* 2d914245 Update GPU Bus Width
-* c72f9b6 drivers: camera: Fix derps in actuator
-* 62b2b77 Fix drop 2% battery
-* ddc9d6d msm: mpm: disable debugging
-* be2101a scripts: change 'host' & 'compiled by' strings without changing them on my vpn. Just cosmetical
-* 0ed221b qcom: msm-core: uninterruptible wait - you can kiss my arse goodbye
-* ac379a7 msm: Use interruptible wait to not affect load average
-* 420ad11 qcom: mpm: use interruptible wait to reduce load avg
-* febff1f sched/core: Fix a race between try_to_wake_up() and a woken up task
-* 7da2edf Remove '+' symbol from kernel version string
-* aaa13d7 Add additional files
-* cfed8d3 Script Updates
-* dca85cb Update Anykernel2 Script -Anykernel2 update & other updates Merge to latest changes(3 feb)
-* bd88559 Add build script and Anykernel2 script
-* df4d2c5 Make it kenzo_defconfig
+#### frameworks/base/
+* 96c4ad4d486 Reset battery stats [1/2]
+* f0cf7680546 SymbolComparator operator() is missing const
+* 7a5eb4fbd81 Adopt lockscreen shortcut hint from AOSP
 
-#### vendor/xiaomi/
-* e3e8808 Revert "Change goodix netlink group to 29, because it is conflit with wifi driver"
+#### packages/apps/Settings/
+* c37422cf49 Reset battery stats [2/2]
+* 8c0159789e Revert "Settings: Fix internal storage summary for non-emulated storage"
+* a4f6840ce9 Settings: Fix automatic hotspot turn off summary
+* 5db6280816 Automatic translation import
 
-05-03-2017
+#### vendor/dnd/
+* 5f36ad2a sensitive_pn: Add sensitive number for Greece
+
+06-17-2017
 ============
-#### OTA_config/
-* 4000000 Update mido to v1.4 20170502
-* db22982 Update lettuce 02/05/2017
-* 8d17eb4 ota: add addison (Moto Z Play)
-* e1463c7 ota : add one plus 2
 
-#### bootable/recovery/
-* 8011e66 recovery: Fix UI freezing
+#### build/
+* 46a07a7a2 mka darkness !
+
+#### frameworks/av/
+* c4f3677cf Forward Port: Add Camera sound toggle [3/3]
+
+#### frameworks/base/
+* 4412f293a50 Keyguard: disable logspilling debug
+* 2b73e81840a Keyguard: Forward port lockscreen quick unlock (1/2)
+* a72a5d89c07 Add Haptic Feedback to QS tiles [1/2]
+
+#### hardware/ril/
+* 5758b0e ril: fix a memory leak.
+
+#### hardware/ril-caf/
+* 588e49d ril: fix a memory leak.
+
+#### packages/apps/Settings/
+* 9b63357536 Keyguard: Forward port lockscreen quick unlock (2/2)
+* 2848eb123e Forward Port: Add Camera sound toggle [2/3]
+* eb73a119ee Add lockscreen tab
+* baefa26473 Improvements in Arena
+
+#### packages/apps/WallpaperPicker/
+* 5b27292 Fix bad wallpaper preview image format
+
+#### vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
+* 37e893a Fix missing s/cyanogenmod/lineageos
 
