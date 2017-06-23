@@ -26,7 +26,7 @@
     normal='tput sgr0'
 # input variables set the below the rest must be automatic
 source_tree="DND/"; #path here must be inside home directory
-changelog_path_name=vendor/cm/CHANGELOG.mkdn #changelog file path/name.extension
+changelog_path_name=vendor/dnd/CHANGELOG.mkdn #changelog file path/name.extension
 source_name="DarkNess reDefined" #Name to display in changelog.md top before version
 # input variables end
 
@@ -46,7 +46,7 @@ echo ""
 echo ${cya}" ▼ Generating (for last 7 days) github format changelog.."${txtrst}
 echo ""
 echo >> $Changelog;
-echo "# $source_name Version 1.3 Changelog"    >> $Changelog;
+echo "# $source_name Version 2.0 Changelog"    >> $Changelog;
 echo '====================================================' >> $Changelog;
 echo >> $Changelog;
 
