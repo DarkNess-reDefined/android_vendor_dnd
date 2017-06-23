@@ -17,7 +17,7 @@
 DND_VERSION = v1.5
 
 
-ifeq ($(DND_BUILDTYPE), OFFICIAL)
+ifeq ($(DND_BUILD_TYPE), OFFICIAL)
 PRODUCT_PACKAGES += \
     SlimOTA
 endif
