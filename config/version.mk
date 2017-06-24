@@ -28,7 +28,7 @@ ifndef DND_BUILD_TYPE
 endif
 
 ifneq ($(DND_BUILD_TYPE),)
-DND_MOD_VERSION := DND-$(DND_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(DND_BUILD_TYPE)
+DND_MOD_VERSION := DND-$(DND_VERSION)-$(DND_BUILD)-$(shell date -u +%Y%m%d-%H%M)-$(DND_BUILD_TYPE)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
