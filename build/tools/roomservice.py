@@ -52,13 +52,13 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from DarkNess reDefined Github (http://github.com/DarkNess-reDefined)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from TeamDarkness-Devices Github (http://github.com/TeamDarkness-Devices)." % device)
 
 repositories = []
 
 page = 1
 while not depsonly:
-    result = json.loads(urllib.request.urlopen("https://api.github.com/users/DarkNess-reDefined/repos?page=%d" % page).read().decode())
+    result = json.loads(urllib.request.urlopen("https://api.github.com/users/TeamDarkness-Devices/repos?page=%d" % page).read().decode())
     if len(result) == 0:
         break
     for res in result:
@@ -98,7 +98,7 @@ def indent(elem, level=0):
 
 def get_from_manifest(devicename):
     try:
-        lm = ElementTree.parse(".repo/local_manifests/redefined_manifest.xml")
+        lm = ElementTree.parse(".repo/local_manifests/dnd_manifest.xml")
         lm = lm.getroot()
     except:
         lm = ElementTree.Element("manifest")
@@ -122,7 +122,7 @@ def get_from_manifest(devicename):
 
 def is_in_manifest(projectname, branch):
     try:
-        lm = ElementTree.parse(".repo/local_manifests/redefined_manifest.xml")
+        lm = ElementTree.parse(".repo/local_manifests/dnd_manifest.xml")
         lm = lm.getroot()
     except:
         lm = ElementTree.Element("manifest")
@@ -135,7 +135,7 @@ def is_in_manifest(projectname, branch):
 
 def add_to_manifest_dependencies(repositories):
     try:
-        lm = ElementTree.parse(".repo/local_manifests/redefined_manifest.xml")
+        lm = ElementTree.parse(".repo/local_manifests/dnd_manifest.xml")
         lm = lm.getroot()
 
     except:
@@ -150,7 +150,7 @@ def add_to_manifest_dependencies(repositories):
                 print ('Updating dependency %s' % (repo_name))
                 existing_project.set('name', repository['repository'])
             if existing_project.attrib['revision'] == repository['branch']:
-                print ('DarkNess-reDefined/%s already exists' % (repo_name))
+                print ('TeamDarkness-Devices/%s already exists' % (repo_name))
             else:
                 print ('updating branch for %s to %s' % (repo_name, repository['branch']))
                 existing_project.set('revision', repository['branch'])
@@ -169,13 +169,13 @@ def add_to_manifest_dependencies(repositories):
     raw_xml = ElementTree.tostring(lm).decode()
     raw_xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + raw_xml
 
-    f = open('.repo/local_manifests/redefined_manifest.xml', 'w')
+    f = open('.repo/local_manifests/dnd_manifest.xml', 'w')
     f.write(raw_xml)
     f.close()
 
 def add_to_manifest(repositories):
     try:
-        lm = ElementTree.parse(".repo/local_manifests/redefined_manifest.xml")
+        lm = ElementTree.parse(".repo/local_manifests/dnd_manifest.xml")
         lm = lm.getroot()
     except:
         lm = ElementTree.Element("manifest")
@@ -184,12 +184,12 @@ def add_to_manifest(repositories):
         repo_name = repository['repository']
         repo_target = repository['target_path']
         if exists_in_tree(lm, repo_name):
-            print('DarkNess-reDefined/%s already exists' % (repo_name))
+            print('TeamDarkness-Devices/%s already exists' % (repo_name))
             continue
 
-        print('Adding dependency: DarkNess-reDefined/%s -> %s' % (repo_name, repo_target))
+        print('Adding dependency: TeamDarkness-Devices/%s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "github", "name": "DarkNess-reDefined/%s" % repo_name, "revision": "n7x" })
+            "remote": "github", "name": "TeamDarkness-Devices/%s" % repo_name, "revision": "n7x" })
 
         if 'branch' in repository:
             project.set('revision',repository['branch'])
@@ -205,7 +205,7 @@ def add_to_manifest(repositories):
     raw_xml = ElementTree.tostring(lm).decode()
     raw_xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + raw_xml
 
-    f = open('.repo/local_manifests/redefined_manifest.xml', 'w')
+    f = open('.repo/local_manifests/dnd_manifest.xml', 'w')
     f.write(raw_xml)
     f.close()
 
@@ -272,5 +272,5 @@ else:
             print("Done")
             sys.exit()
 
-print("Repository for %s not found in the DarkNess reDefined Github repository list. If this is in error, you may need to manually add it to your local_manifests/redefined_manifest.xml." % device)
+print("Repository for %s not found in the TeamDarkness-Devices Github repository list. If this is in error, you may need to manually add it to your local_manifests/dnd_manifest.xml." % device)
 
