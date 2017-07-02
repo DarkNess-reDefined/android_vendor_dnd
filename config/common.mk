@@ -39,10 +39,6 @@ endif
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.substratum.verified=true
 
-# Copy over the changelog to the device
-PRODUCT_COPY_FILES += \
-    vendor/dnd/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
-
 #DU Utils Library
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils
