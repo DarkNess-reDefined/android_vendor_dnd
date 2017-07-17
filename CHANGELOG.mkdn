@@ -1,207 +1,290 @@
 
-# DarkNess reDefined Version 2.0 Changelog
+# DarkNess reDefined Version 2.1 Changelog
 ====================================================
 
-06-23-2017
+07-17-2017
+============
+
+#### frameworks/base/
+* ae8326b09e3 Align recent 'Clear All' text with 'Free Ram' text
+* 1e5bb030c6e Add membar to recents options [1/2] BenzoRoms/frameworks_base@98de755 BenzoRoms/frameworks_base@0a454d1
+* f1568cb24ca Fix FAB not disappearing in multiwindow
+* 92f7aebef24 Recents fab button improvements
+* e101e75a812 Recents Clear All Button Tweaks and Add FAB to Recents Panel Thanks to RR and @varund7726
+
+#### packages/apps/Settings/
+* ebcc00c438 Add membar to recents options [2/2]
+* aa4f7342d2 RecentSettings: recents panel clear all button tweaks
+* 15b63abcbe Immersive Recents [2/2]
+* f1f1377671 Arena: Add Recents category
+* 78f1c02502 Arena: Add Panels tab
+
+#### vendor/dnd/
+* 1adf5b80 prebuilt: update magisk to v13.2
+* f8fe00e0 Fix issues with fetching projects by roomservice
+
+07-16-2017
 ============
 
 #### build/
-* e1744d2d7 Product: Delete this call from build
+* 0d953477a Do Not Odex Eng Builds
+* ff779cc92 Hack to Avoid odexing
+* 63c5d45b3 Eng: Include in user build filter
+* 865a2a620 Mock Location should be off!
+* b35bb5dbc Remove Debug from Eng
+* bce7cdcfa Don't build recovery at all
+* 2f29375d4 Don't build tests in normal builds
 
 #### frameworks/base/
-* 733028cd98b FWB :SmartBar Button Tint [1/3] With Reference to Patch AICP/frameworks_base@85d97f4
-* c911b034492 FWB:Add a Switch to Enable Disable Dynamic Navbar[1/2]
+* b5851983b57 ImmersiveRecents: improvements/cleanup
+* 4964f0925d8 Immersive Recents [1/2]
 
-#### hardware/qcom/fm/
-* 4c2e39e Automatic translation import
+#### hardware/qcom/audio-caf/msm8996/
+* f8fcd590 Merge tag 'LA.UM.5.5.r1-05300-8x96.0' into HEAD
 
-#### manifest/
-* 42395ef manifest: track audiofx again
+#### hardware/qcom/display-caf/msm8996/
+* 3005091d8 Merge tag 'LA.UM.5.5.r1-05300-8x96.0' into HEAD
 
-#### packages/apps/Bluetooth/
-* 7f2b5c8c Automatic translation import
+#### hardware/qcom/media-caf/msm8996/
+* 0273a6407 Merge tag 'LA.UM.5.5.r1-05300-8x96.0' into HEAD
 
-#### packages/apps/Calendar/
-* ca094f37 Automatic translation import
+07-15-2017
+============
+#### OTA_config/
+* 662b738 Merge pull request #13 from PainKiller3/master
+* be8af39 Update dndOTA.xml
+* 7b7dde7 Add OTA For taido_row
+* 2012192 Merge pull request #11 from PainKiller3/master
+* 3aa0009 Update dndOTA.xml
+* f90a076 Update dndOTA.xml
 
-#### packages/apps/CellBroadcastReceiver/
-* ebf9e97 Automatic translation import
-
-#### packages/apps/Launcher3/
-* b72d39424 Launcher3: bring back pulldown to open notifications panel
-* 7e664dd5b Launcher3: animate workspace when animating the Google now page
-* 08fd9155e LauncherClient: make sure service is connected before trying to unbind
-
-#### packages/apps/LockClock/
-* b41c0d7 Automatic translation import
-
-#### packages/apps/Recorder/
-* 67d5b07 Automatic translation import
+#### build/
+* d763b6175 Makefile: restore missing vendor build.prop
+* 81efb9c13 build: Remove slash in the end
+* 1c6e61797 Make the default preopt 'interpret-only'.
+* a1db5394b Don't preopt system server apps in system_other.
+* 0719da1dc Introduce a whitelist for core apps used by system server.
+* e30c970b8 Clean option: deviceclean
+* cd889b851 Make sure to include WebViewGoogle if present
+* 59ea0d821 product: remove this annoying email app
 
 #### packages/apps/Settings/
-* b538475351 Arena: Organize tabs
-* b0a37d2f46 Some string changes
-* 20a4e5c42b Arena: Smartbar Button Tint [3/3]
-* f58e69ff3f Arena: Add a Switch to Enable Disable Dyanamic Navbar[2/2]
+* 398b7611cc SmartBar: make button longpress delay configurable [3/3]
 
-#### packages/apps/Terminal/
-* a2a05d2 Automatic translation import
-
-#### packages/inputmethods/LatinIME/
-* 3e047b887 Automatic translation import
-
-#### packages/providers/DownloadProvider/
-* 30cc23d Automatic translation import
-
-#### packages/resources/devicesettings/
-* 75498f7 Automatic translation import
-
-#### vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
-* dd1766a Automatic translation import
-
-#### vendor/dnd/
-* 5e2a1bd7 changelog_generator: cm -> dnd
-* 1fb6f03d vendor: Add script
-* f87b1ea1 vendor: product: Add Audiofx again
-* facbbd07 vendor: product: MusicFx comes with dsp manager
-
-06-22-2017
+07-14-2017
 ============
+
+#### frameworks/base/
+* 8cf4ff7654d SmartBar: make button longpress delay configurable [2/3]
+* 30ff5ce2c53 hwui: Remove deprecated compiler flag
+* da550d4e861 SystemUI: Fix Notification Background Color Issue
+* 76bfacc78e4 frameworks/base: reduce the setTransactions
 
 #### packages/apps/DUI/
-* 40e25cb SmartBar editor: block quick popup when dragging the button
-* 70d85ae Update RU translations
-* 6500eb9 French Translations
-* bb08320 French Translations
-* 45be6a5 Update RU translations
-* 8dd8ac1 Fix Fling swipe up gesture being hard to trigger
-* 214691b Smarbar Tint: Use Multiply Color filter
-* c4e872f DUI :SmartBar Button Tint [2/3]
+* c83f0c1 SmartBar: make button longpress delay configurable [1/3]
 
-06-21-2017
-============
+#### packages/apps/MusicFX/
+* c76bad2 French Translations
+* 5c43a02 MusicFX : Save and load presets from external storage
+* 0b7750c MusicFX: cleanup
 
-#### packages/providers/MediaProvider/
-* fadf365 MediaProvider: Fix where condition of delete queries
+#### packages/apps/Settings/
+* d6a7e4fa7f Themes: Expose SmartBar Dialogs from manifest
+* eee3c56218 Bring back some physical keyboard settings
 
-06-20-2017
+#### system/core/
+* 2027b4694 logcat: Add missing newline to read failure
+* 0651e61a4 init.rc: setup console-ramoops-0
+* 121883185 healthd: check console-ramoops-0
+* 9e219821e fs_mgr: check console-ramoops-0
+
+#### vendor/dnd/
+* b817a80e qcom: Enable TARGET_USES_QCOM_MM_AUDIO
+* 3cb13583 repopick: don't bail on drafts
+* 9f493087 Update Turbo from July security release
+
+07-10-2017
 ============
 
 #### bionic/
-* d649844e7 Eliminate deadlock in forked child due to delayed resetting mutex lock
-* 1621cb156 The default locale "" should be a UTF-8 locale.
-* fd11967c5 Improve handling of clang
-
-#### frameworks/base/
-* 336fe30d50d SystemUI: force a clock update if the screen is turned back on
-* fbbc92c5605 Optimised hwui rounded corners shader
-* 609ce328a97 fingerprint: Speed up wake-and-unlock scenario
-* 27f8f8eb901 GlobalActions: Confirm power off
-* dee8a9098f0 sensors: fix native crash when dynamic sensor is removed
-* c5d19b88ea0 sensors: intern jstrings for memory savings
-* d32f970e52a Fix the Wi-Fi wrong status when turning Wi-Fi on
-* 292d4eefcfc Check and send usb state broadcast when devices boots
-
-#### packages/apps/Settings/
-* 077f086293 Fix ApplicationsState.Session memory leak in settings app
-* a0ceb101e1 Fix the momery leak in DrawOverlayDetails
-
-#### system/core/
-* dae84af6d healthd: fix include paths
-* 22580881f Filter GalleryDatab*
-* f45280049 Silence spammy logs from camera blobs (AEC_PORT and mm-camera)
-
-06-19-2017
-============
-
-#### frameworks/base/
-* f037c8d9563 Only send usb disconnect intents after boot.
-* b25052cce7f fix KeyEvent can't correctly finish when inputmethod time out happened
-* dd25dcaf667 Fix an apk icon animation corruption issue
-* af78a798e28 Fix crash by IllegalStateException in sendAccessibilityEvent
-* bce75082431 Clean up pending broadcast receivers when force stopping package
-* a9ae28d3152 Fix memory leak in WifP2pManager
-* fbb4476e752 Reduce MTU Size
-* d9d828412dd Fix TaskRecord wrong dump element firstActiveTime
-* 6214ac5d5db KernelCpuSpeedReader: Account for missing sysfs nodes
-* 5e90f296d53 Fix batterySendBroadcast not synchronized issue.
-* 033cb91ce77 bless python versions newer than 2.6
-* fa85b181b61 Handle ActivityNotFoundException for contacts activity
-* f717fda2b62 extend PreferenceActivity for title text on a single pane mode
-* cf015f3cfe1 Override onRestoreInstanceState() in MultiSelectListPreference
-* 5ea0a143c0e Fragment animations are not being saved across configuration changes
-* 19ac93475e0 Fix to NullPointerException when activity is relaunched
-* bc3047d75c1 Fix right mLastTimeUsed when aggregate UsageStats
-* b14a268f01c Fix ListView is not scrolled properly with arrows
-* cb046017856 Synchronize access of mSubscriptions
-* ab48ed28281 Provide synchronization to setview to avoid NPE
-* d5b0f667e47 AsyncTask: Fix to remove canceled tasks from executor's queue.
-* ef4e6a8683d frameworks/base: Fix to avoid crash when the tab is not set from app
-* 0e7eaf39510 IInputMethodWrapper to recycle SomeArgs in all cases.
-* 9038056411c Catch corruptexception during Transaction operation
-* 5bf9d755353 Fix force idle issue
-* c4864abe8c3 preloaded drawables few
-* f13f3550710 Schedule agentDisconnected() in handler thread
-* 0b3acc7ab6a Fix PrcessRecord.renderThreadTid not reset in some case.
-* 739cbebfb73 SoundPool: decrease binder call when calling SoundPool.play
-* ee289a39dd3 Net monitor: fix arrows not showing when data saver is enabled
-
-#### hardware/qcom/bt-caf/
-* 6473ddb Merge tag 'LA.UM.5.5.r1-04900-8x96.0' into HEAD
-
-06-18-2017
-============
+* aa06d01ec Merge tag 'android-7.1.2_r24' into cm-14.1
 
 #### build/
-* bbc0a8752 Revert "Preventing default locale from being overridden because of buildinfo.sh"
-* ce6590970 Revert "build: skip 'ro.product.device' using  new macro "TARGET_SKIP_PRODUCT_DEVICE""
+* ed72d11e9 Merge tag 'android-7.1.2_r24' into cm-14.1
 
-#### device/qcom/common/
-* 5985a61 power: Use the correct opcode for STOR_CLK_SCALE_DIS
-
-#### frameworks/base/
-* 96c4ad4d486 Reset battery stats [1/2]
-* f0cf7680546 SymbolComparator operator() is missing const
-* 7a5eb4fbd81 Adopt lockscreen shortcut hint from AOSP
-
-#### packages/apps/Settings/
-* c37422cf49 Reset battery stats [2/2]
-* 8c0159789e Revert "Settings: Fix internal storage summary for non-emulated storage"
-* a4f6840ce9 Settings: Fix automatic hotspot turn off summary
-* 5db6280816 Automatic translation import
-
-#### vendor/dnd/
-* 5f36ad2a sensitive_pn: Add sensitive number for Greece
-
-06-17-2017
-============
-
-#### build/
-* 46a07a7a2 mka darkness !
+#### external/skia/
+* a99de6c19 Merge tag 'android-7.1.2_r24' into cm-14.1
+* 5e4b1c925 Set a limit on the size for BMP images DO NOT MERGE
 
 #### frameworks/av/
-* c4f3677cf Forward Port: Add Camera sound toggle [3/3]
+* 8c7572496 Merge tag 'android-7.1.2_r24' into cm-14.1
 
 #### frameworks/base/
-* 4412f293a50 Keyguard: disable logspilling debug
-* 2b73e81840a Keyguard: Forward port lockscreen quick unlock (1/2)
-* a72a5d89c07 Add Haptic Feedback to QS tiles [1/2]
+* 911db870545 PowerManagerService: add a config to light up buttons only when pressed
+* 89997a4d10c Merge tag 'android-7.1.2_r24' into cm-14.1
+* 5f5c259d14c SystemUI: Fix heads up tile off color
+* c1067624575 BatteryService: add ONEPLUS dash charging support
 
-#### hardware/ril/
-* 5758b0e ril: fix a memory leak.
+#### frameworks/native/
+* c60b9c7da Merge tag 'android-7.1.2_r24' into cm-14.1
 
-#### hardware/ril-caf/
-* 588e49d ril: fix a memory leak.
+#### manifest/
+* 456a8ae manifest: android-7.1.2_r17 -> android-7.1.2_r24
 
 #### packages/apps/Settings/
-* 9b63357536 Keyguard: Forward port lockscreen quick unlock (2/2)
-* 2848eb123e Forward Port: Add Camera sound toggle [2/3]
-* eb73a119ee Add lockscreen tab
-* baefa26473 Improvements in Arena
+* 5af7c86035 Merge tag 'android-7.1.2_r24' into cm-14.1
 
-#### packages/apps/WallpaperPicker/
-* 5b27292 Fix bad wallpaper preview image format
+#### system/sepolicy/
+* b4c0edb Merge tag 'android-7.1.2_r24' into cm-14.1
 
-#### vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
-* 37e893a Fix missing s/cyanogenmod/lineageos
+#### vendor/dnd/
+* a0396cdf sensitive_pn: Enter full list of Indian MCC codes
+* af66a179 sensitive_pn: Enter full list of GB MCC codes
+* 4d6495fa sensitive_pn: Enter full list of US MCC codes
+* e752f9dd Add LTE support for China Telecom Macau.
+
+07-09-2017
+============
+
+#### hardware/qcom/audio-caf/msm8996/
+* 23d91de4 Merge 69af59b8962261e89d3309fd17b28425a3c0170f on remote branch
+
+#### hardware/qcom/media-caf/msm8996/
+* c62bab118 Merge 04555962a06fe17ba83f2419951b30482f5f7d1f on remote branch
+
+#### manifest/
+* e0d68ee manifest: track our fork of external/webview
+* b2e6b74 manifest: omnijaws is a service
+* 3f5ac3c manifest: track hals from lineage
+
+07-08-2017
+============
+
+#### build/
+* 3f0893aaa Revert "Remove applypatch and recovery stuff"
+
+#### external/chromium-webview/
+* 27919a7 Use chromium webview
+
+#### packages/apps/AudioFX/
+* 4273aee Automatic translation import
+
+#### packages/apps/LockClock/
+* e0810ea Automatic translation import
+* 9f2ff45 LockClock: add option to suppress date on widget
+
+#### packages/apps/Settings/
+* f4c591d8d6 Development Settings: Show on all build types
+* 001ada3195 Revert all devs option changes
+
+#### packages/apps/Terminal/
+* 2e009e8 Automatic translation import
+
+#### packages/providers/WeatherProvider/
+* 37f067f Automatic translation import
+
+#### vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
+* 8a9c801 Automatic translation import
+
+#### vendor/dnd/
+* 87ea0b30 Update to magisk v13.0(c4377ed)
+* 5c4f2825 versioning: remove unused variables
+* ec1ea189 Prebuilt app: remove Magisk Manager
+
+07-07-2017
+============
+#### OTA_config/
+* 46daf7d Merge pull request #10 from Ayushd70/patch-1
+* c89e0bd Add Redmi 2
+
+#### packages/services/Telecomm/
+* 021cadd4 SensitivePhoneNumbers: Fix number comparison
+
+07-06-2017
+============
+
+#### bionic/
+* 8fa2a00d4 Add support for modifying decay timer.
+
+#### external/boringssl/
+* c9d9e0b Merge tag 'android-7.1.2_r24' into cm-14.1
+
+#### libcore/
+* 30ff11853 Merge tag 'android-7.1.2_r24' into cm-14.1
+
+#### packages/providers/DownloadProvider/
+* d20a3a2 Merge tag 'android-7.1.2_r24' into cm-14.1
+
+#### packages/providers/MediaProvider/
+* 03abed5 Merge tag 'android-7.1.2_r24' into cm-14.1
+
+#### vendor/dnd/
+* 4f8fec30 scripts: add missing export
+
+07-04-2017
+============
+#### OTA_config/
+* 8941b2c Update kenzo
+
+#### frameworks/av/
+* 95e45a685 CameraService: Fix cameraId type of onDeviceStatusChanged
+
+#### frameworks/base/
+* d0089f16d2b [ActivityManager]an extra animation when finish a visible paused activity
+* 3ba34e0af46 Camera2: Fix Error Callback if buffer lost.
+* 74dc717d7f5 SystemUI: move time tick to bg handler
+* fe4a9fdb8dd Frameworks: Fix Null Pointer Issue
+* 47badc99d11 Set the decay timer for all forked apps.
+* 9227ebbb28d SettingsLib: Add two more animation speed steps
+* e524a39c507 Fix lag when opening an entry from the Settings left drawer
+* 6eb42ee807d base: SystemUI: add dedicated TextView for OmniJaws error marker
+* e02209b5e59 base: SystemUI: dont show OmniJaws error that prominent
+* 73104eb1f9e base: SystemUI: dont hide weather forecast data on errors
+* 8ecff074ffa base: SystemUI: use new OmniJaws error broadcasts
+* 5437031fd6d ActivityStarter: Fix protected app intents
+* 040461ca740 SystemUI: Make play queue toggle more visible
+* d90508bb10d Volume Panel: Fix Bluetooth music stream icon when muted
+* 0786fc52eef SystemUI: Fix task lock & freeform buttons placement
+* 749b3cbcccb Add support for the .opus file format
+* e98b7abdf97 Binder: Be forceful about a forceful exit
+
+#### hardware/qcom/fm/
+* 2e20c17 Automatic translation import
+
+#### packages/apps/Profiles/
+* 9d14b09 Automatic translation import
+
+#### packages/apps/Terminal/
+* 7c34511 Automatic translation import
+
+#### packages/providers/DataUsageProvider/
+* 6637927 Automatic translation import
+
+#### packages/providers/WeatherProvider/
+* d5ebc76 Automatic translation import
+
+#### packages/services/OmniJaws/
+* 5a96bc8 Switch to our OWN API key - Read commit message
+
+#### vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
+* fb40ce0 Automatic translation import
+
+#### vendor/dnd/
+* 27008e8c qcom_utils: Cleanup supported QCOM_BOARD_PLATFORMS
+* fba14202 build: qcom_target: Define MASTER_SIDE_CP_TARGET_LIST
+* 69c306b1 apns-conf: Add Japan Umobile APNs
+
+07-03-2017
+============
+
+#### hardware/qcom/audio-caf/msm8916/
+* 5578c76b Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.22' into cm-14.1-caf-8916
+
+#### hardware/qcom/audio-caf/msm8994/
+* 9cddbb87 Merge remote-tracking branch 'caf/LA.BF64.1.2.3_rb1.14' into cm-14.1-caf-8994
+
+#### hardware/qcom/fm/
+* 7a29d93 FM: Fix helium hal build
+* 0df98d3 Change rename_dialog background color to default
+* f62c66a FMStats: fix GetFMStatsForFreq error for non-cherokee
 
