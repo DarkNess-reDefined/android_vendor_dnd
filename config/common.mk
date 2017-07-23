@@ -133,7 +133,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     DNDWalls \
     OmniJaws \
-    Amaze \
+    MiXplorer \
     ViaBrowser \
     Turbo
 
