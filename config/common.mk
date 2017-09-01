@@ -101,6 +101,11 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Turbo
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
