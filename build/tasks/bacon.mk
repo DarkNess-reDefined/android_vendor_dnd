@@ -14,12 +14,13 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# DarkNess-reDefined OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+
+DND_TARGET_PACKAGE := $(PRODUCT_OUT)/DND-$(DND_VERSION)-$(TARGET_DEVICE)-$(shell date -u +%Y%m%d-%H%M)-$(DND_BUILD_TYPE).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(DND_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(DND_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(DND_TARGET_PACKAGE).md5sum
+	@echo "Package Complete: $(DND_TARGET_PACKAGE)" >&2
