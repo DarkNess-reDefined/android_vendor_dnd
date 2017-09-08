@@ -30,7 +30,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.substratum.verified=true \
     ro.boot.vendor.overlay.theme=com.google.android.theme.pixel \
     persist.sys.recovery_update=false \
-    ro.build.selinux=0
+    ro.build.selinux=0 \
+    persist.sys.disable_rescue=true
 
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
