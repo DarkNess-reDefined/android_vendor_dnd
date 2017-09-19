@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     ViaBrowser \
     DarknessHub \
-    Launcher3
+    Launcher3 \
+    Turbo
 
 # Exchange support
 PRODUCT_PACKAGES += \
