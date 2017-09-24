@@ -1,5 +1,5 @@
 # Insert new variables inside the DND structure
-lineage_soong:
+dnd_soong:
 	$(hide) mkdir -p $(dir $@)
 	$(hide) (\
 	echo '{'; \
