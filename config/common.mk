@@ -101,14 +101,19 @@ endif
 # Bootanimation
 $(call inherit-product, vendor/dnd/prebuilt/common/bootanimation/bootanimation.mk)
 
-# Required Darkness-Redefined packages
+# Required base packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
     CMParts \
     Development \
     Profiles \
-    WeatherManagerService
+    WeatherManagerService \
+    CMSettingsProvider \
+    ExactCalculator \
+    LockClock \
+    WallpaperPicker \
+    WeatherProvider
 
 # Optional packages
 PRODUCT_PACKAGES += \
@@ -121,14 +126,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
-
-# Custom Darkness-Redefined packages
-PRODUCT_PACKAGES += \
-    CMSettingsProvider \
-    ExactCalculator \
-    LockClock \
-    WallpaperPicker \
-    WeatherProvider
 
 # DarkNess-reDefined packages
 PRODUCT_PACKAGES += \
