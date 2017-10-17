@@ -111,6 +111,11 @@ PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
+# Charging sounds
+PRODUCT_COPY_FILES += \
+    vendor/dnd/google/effects/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
+    vendor/dnd/google/effects/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
