@@ -1,43 +1,9 @@
 PRODUCT_BRAND ?= DarkNess-reDefined
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    keyguard.no_require_sim=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
-
-ifneq ($(TARGET_BUILD_VARIANT),user)
-# Thank you, please drive thru!
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
-endif
-
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
-endif
-
-ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
-  PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.device.cache_dir=/data/cache
-else
-  PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.device.cache_dir=/cache
-endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -237,4 +203,5 @@ DEVICE_PACKAGE_OVERLAYS += vendor/dnd/overlay/common
 -include vendor/dnd/config/partner_gms.mk
 -include vendor/cyngn/product.mk
 
+$(call inherit-product, vendor/dnd/config/dnd_props.mk)
 $(call prepend-product-if-exists, vendor/extra/product.mk)
