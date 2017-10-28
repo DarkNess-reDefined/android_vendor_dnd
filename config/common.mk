@@ -71,7 +71,6 @@ $(call inherit-product, vendor/dnd/prebuilt/common/bootanimation/bootanimation.m
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
-    CMParts \
     Development \
     Profiles \
     WeatherManagerService \
